@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="uds-plus-insurance-codes"/>
+  <url value="http://hl7.org/fhir/us/uds-plus/CodeSystem/uds-plus-insurance-codes"/>
+  <version value="1.0.0"/>
+  <name value="UDSPlusInsuranceCodes"/>
+  <title value="UDS Plus Insurance Codes"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2022-09-06"/>
+  <description value="The UDS Plus CodeSystem is a &#39;starter set&#39; of codes supported for identifying insurance types used by patients in UDS+ program."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <valueSet value="http://hl7.org/fhir/us/uds-plus/ValueSet/uds-plus-insurance-codes"/>
+  <content value="complete"/>
+  <count value="9"/>
+  <concept>
+    <code value="none-or-uninsured"/>
+    <display value="None or Uninsured"/>
+    <definition value="Patient does not have insurance"/>
+  </concept>
+  <concept>
+    <code value="medicaid-title-19-21"/>
+    <display value="Medicaid Title X1X"/>
+    <definition value="Patients with Medicaid (Title X1X) insurance"/>
+  </concept>
+  <concept>
+    <code value="chip-medicaid"/>
+    <display value="CHIP Medicaid"/>
+    <definition value="Patients with CHIP Medicaid insurance"/>
+  </concept>
+  <concept>
+    <code value="medicare"/>
+    <display value="Medicare"/>
+    <definition value="Patients with Medicare insurance"/>
+  </concept>
+  <concept>
+    <code value="dually-eligible-medicaid-medicare"/>
+    <display value="Dually Eligible"/>
+    <definition value="Patients with both Medicare and Medicaid"/>
+  </concept>
+  <concept>
+    <code value="medicare-and-private"/>
+    <display value="Medicare and Private"/>
+    <definition value="Patients with both Medicare and Private insurance such as Medigap"/>
+  </concept>
+  <concept>
+    <code value="other-non-chip-public-insurance"/>
+    <display value="Other Non CHIP Public Insurance"/>
+    <definition value="Patients who have other public insurance which is non CHIP"/>
+  </concept>
+  <concept>
+    <code value="other-public-insurance-chip"/>
+    <display value="Other Public Insurance CHIP"/>
+    <definition value="Patients who have other public insurance which is CHIP"/>
+  </concept>
+  <concept>
+    <code value="private-insurance"/>
+    <display value="Private Insurance"/>
+    <definition value="Patients has Private Insurance"/>
+  </concept>
+ </CodeSystem>

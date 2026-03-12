@@ -1,0 +1,74 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <!-- The spaces between the open and close "a" tag are mandatory.  (Cuz HTML renderers are dumb...) -->
+  
+  <a style="background-color:Tomato;color:White;"><b>Note about Canoncial URLs in IG:</b> All canonical (Official) URLs such as the one above http://hl7.org/fhir/us/uds-plus/ImplementationGuide/udsplus will be changed in the future and are not available currently on the web.</a>
+  
+  
+  <a name="intro"> </a>
+  <h3>Introduction</h3>
+	<p>
+    Healthcare industry has embraced FHIR as the standard for data exchange and has been implementing FHIR in the real-world as part of the various accelerators such as Argonaut, DaVinci, Helios. The adoption of FHIR has been further expedited by the ASTP/ONC and CMS regulations which require the implementation of FHIR for multiple use cases. One of the competing requirement that is emerging in the industry is the need for data which does not contain PHI/PII. These requirements are common among Federal Reporting use cases such as UDS+, Public Health reporting to CDC, training data needs for training AI models, data needs for research programs. This implementation guide creates a set of profiles for USCDI resources that can be used to exchanged de-identified and anonymized information in the US.
+  </p>
+  <p>
+  This DRAFT Implementation Guide (IG) defines the specifications by which Federal Agencies such as HRSA, SAMSHA and others can receive line level de-identified and/or anonymized infomration. The IG specifies profiles to exchange 
+  <ul>
+  <li><b>De-identified Patient data using FHIR APIs</b></li>
+  <li><b>Anonymized Patient data using FHIR APIs</b></li>
+  </ul>
+  </p>
+	<a name="relationship"> </a>
+	<h3>Relationship to other Implementation Guides</h3>
+	<p>
+	This section elaborates the relationship of this IG to other implementation guides
+        </p>
+	<a name="us-core-relationship"> </a>
+	<h4>Relationship to US Core Implmentation Guide</h4>
+	<p>
+	This implementation guide, leverages terminology from US Core, but does not use US Core profiles directly because US Core profiles contain mandatory PHI/PII data elements which need to be excluded in the de-identification and/or anonymization process.
+        </p>
+	<a name="darts-relationship"> </a>
+	<h4>Relationship to De-identification, Anonymization, Redaction Toolkit Services (DARTS) Implmentation Guide</h4>
+	<p>
+	This implementation guide complements the the De-Identification, Anonymization, Redaction Toolkit Services (DARTS) Implementation Guide by defining the content profiles that need to be used for data exchange, where as the DARTS IG defines the  services that take PHI/PII data and produce the content conformant to this DAPL IG.
+        </p>
+	<a name="ds4p-relationship"> </a>
+	<h4>Relationship to Data Segmentation for Privacy (DS4P) Implmentation Guide</h4>
+	<p>
+	DS4P IG specifies the tags,labels,obligations to be used to protect patient privacy during data exchange. Implementers of this IG can leverage any existing DS4P mechanisms if needed as part of the DAPL profiles and data exchanges containing DAPL profiles. 
+        </p>
+	<a name="udsplus-relationship"> </a>
+	<h4>Relationship to HRSA UDS+ Implmentation Guide</h4>
+	<p>
+	HRSA UDS+ IG defines the specific content and APIs for Healthcenters to report data to HRSA annually. UDS+ will be reusing content profiles from this DAPL IG moving forward to build program specific content and will use the services from the DARTS IG to create the content.
+        </p>
+
+	<a name="technical"> </a>
+	<h3>Technical Overview</h3>
+	<p>
+	Currently most of the FHIR data exchange in United States use profiles that contain PHI/PII and are based on US Core Implementation Guide. However, many organizations including Federal agencies do not have the regulatory authority to receive data containing PHI/PII. To enable agencies and organizations to receive line level information without PHI/PII, this IG publishes a set of profiles that can be used for data exchange. 
+    In the context of the IG, there are two primary actors namely 
+    <ul>
+    <li>Data Submitters: Responsible for creating the de-identified or anonymized data and submitting the data to the Data Receivers.</li>
+    <li>Data Receivers: Responsible for receiving, validating and processing the de-identified or anonymized data sent by the Data Submitters.</li>
+    </ul>
+  </p>
+  <a name="walkthrough"> </a>
+  <p>
+    The main sections of this IG are:
+  </p>
+  <ul>
+    <li>
+      <a href="background.html">Background</a> - Provides business context for the implementation guide and information that implementers should be
+      familiar with before reading the remainder of the IG. This identifies the context of the IG and the various reporting mechanisms.
+    </li>
+    <li>
+      <a href="usecases.html">Use Cases</a> - Defines the  use case, workflows, actors and systems that will be used as part of the IG.
+    </li>
+    <li>
+      <a href="dataelements.html"> Data Elements</a> - Specifies common data elements and how they are represented from a de-identification and anonymization perspective.
+    </li>
+    <li>
+      <a href="downloads.html">Downloads</a> - Allows downloading a copy of this implementation guide and other useful information
+    </li>
+  </ul>
+</div>
