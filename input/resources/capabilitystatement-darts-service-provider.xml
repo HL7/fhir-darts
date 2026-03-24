@@ -4,7 +4,7 @@
   <text>
     <status value="generated"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <h2>DARTS Service Provider (e.g, EHR)</h2>
+      <h2>DARTS Service Provider</h2>
       <p>(Requirements Definition Capability Statement)</p>
       <p>Canonical URL: http://hl7.org/fhir/us/darts/CapabilityStatement/darts-service-provider</p>
       <p>Published by: <b>HL7 International - Cross Group Projects</b>

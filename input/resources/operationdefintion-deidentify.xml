@@ -28,6 +28,14 @@
     <type value="Parameters"/>
   </parameter>
   <parameter>
+    <name value="policy"/>
+    <use value="in"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="Policy Parameter indicating the deidentification method to use."/>
+    <type value="string"/>
+  </parameter>
+  <parameter>
     <name value="deidentifiedFileUrls"/>
     <use value="out"/>
     <min value="0"/>
