@@ -98,14 +98,6 @@
         <generation value="markdown"/>
       </page>
       <page>
-        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-          <valueCode value="trial-use"/> 
-        </extension> 
-        <nameUrl value="implementation.html"/>
-        <title value="Implementation Notes"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
       	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
           <valueCode value="trial-use"/> 
 	      </extension>
