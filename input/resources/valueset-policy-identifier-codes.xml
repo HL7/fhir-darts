@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="darts-policy-identifier-codes"/> 
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2022-08-04T15:52:33.158+00:00"/>
+    <source value="#3Te0anOrvocKgcow"/>
+    <profile
+             value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <url value="http://hl7.org/fhir/us/darts/ValueSet/darts-policy-identifier-codes"/>
+  <version value="1.0.0"/>
+  <name value="DARTSPolicyIdentifierCodes"/>
+  <title value="DARTS Policy Identifer Codes"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-03-27"/>
+  <publisher value="HL7 PHWG"/>
+	<contact>
+		<telecom>
+			<system value="other"/>
+			<value value="http://hl7.org/fhir"/>
+		</telecom>
+	</contact>
+  <description value="The DARTS Policy Identifier codes is a valueset that is used to specify the type of policy to apply for deidentification of data."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/us/darts/CodeSystem/darts-policy-identifiers"/>
+      <concept>
+      	<code value="HHS_SAFE_HARBOR_DETERMINISTIC_METHOD"/>
+      	<display value="Apply HHS Safe Harbor deterministic guidance for Deidentification"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>
+

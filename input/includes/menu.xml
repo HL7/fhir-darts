@@ -2,7 +2,7 @@
   <li><a href="index.html">IG Home</a></li>
   <li><a href="toc.html">Table of Contents</a></li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">UDS Background<b class="caret">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">DARTS Background<b class="caret">
       </b>
     </a>
     <ul class="dropdown-menu">   
@@ -12,9 +12,6 @@
       <li>
         <a href="{{site.data.info.assets}}usecases.html">Use Cases and Workflows</a>
       </li>
-      <li>
-        <a href="{{site.data.info.assets}}dataelements.html">UDS+ Data Elements and FHIR Mappings</a>
-      </li>
     </ul>
   </li>
   <li class="dropdown">
@@ -22,11 +19,9 @@
       </b>
     </a>
     <ul class="dropdown-menu">
+      
       <li>
-        <a href="reportingguidance.html">Implementation Guidance</a>
-      </li>
-      <li>
-        <a href="spec.html">FHIR API Based Reporting</a>
+        <a href="spec.html">Formal Specification</a>
       </li>
     </ul>
   </li>

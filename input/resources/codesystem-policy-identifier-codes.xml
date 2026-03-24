@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="darts-policy-identifiers"/>
+  <url value="http://hl7.org/fhir/us/darts/CodeSystem/darts-policy-identifiers"/>
+  <version value="1.0.0"/>
+  <name value="DARTSPolicyIdentifiers"/>
+  <title value="DARTS Policy Identifiers"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2026-03-27"/>
+  <description value="The DARTS Policy Identifiers CodeSystem contains a set  of codes that will be used for DARTS services to indicate the deidentification policies."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <valueSet value="http://hl7.org/fhir/us/darts/ValueSet/darts-policy-identifier-codes"/>
+  <content value="complete"/>
+  <count value="1"/>
+  <concept>
+    <code value="HHS_SAFE_HARBOR_DETERMINISTIC_METHOD"/>
+    <display value="Apply HHS Safe Harbor deterministic guidance for Deidentification"/>
+    <definition value="HHS Safe Harbor deterministic guidance removes 18 different attributes from PII/PHI data to create deidentifiable data"/>
+  </concept>
+ </CodeSystem>

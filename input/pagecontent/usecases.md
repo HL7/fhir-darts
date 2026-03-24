@@ -1,162 +1,122 @@
-### Business Need and User Stories
-The section identifies the business needs and specific user stories for UDS+ reporting.
+### Business Need and Use Cases
+The section identifies the business needs and specific user stories for DARTS FHIR IG.
 
-#### Use Case Goals
-Each calendar year, HRSA Health Center Program awardees and look-alikes are required to report a core set of information, including data on patient characteristics, services provided, clinical processes and health outcomes, patients' use of services, staffing, costs, and revenues as part of a standardized reporting system known as the Uniform Data System (UDS). The UDS is a standard data set that is reported annually and provides consistent information about health centers. It is the source of unduplicated data for the entire scope of services included in the grant or designation for the calendar year. HRSA uses UDS data to assess the impact and performance of the Health Center Program, and to promote data-driven quality improvement.
+#### Use Cases for Deidentification 
 
-The goals of the use case is to transmit de-identified patient information to HRSA as part of the annual health center submission. The intent is to provide access to data not currently available through aggregate data reporting. The use case will help assess how to address the gaps in workflow and triggers, and the ability to leverage HL7 FHIR APIs to address HRSA business needs.
+**Use Case 1: Federal Agency Reporting:** 
 
-#### Problem Statement
+Currently there are many reporting programs across the US where healthcare organizations submit data to state and federal agencies in aggregate form. While these aggregate reports meet current mandates, there is a desire to obtain more detailed line-level information instead of aggreate data. However, in many instances the federal agency may not have the authorities necessary to receive PII/PHI data and hence requires the data to be deidentified in order to receive more granular data. The following are the examples of such reporting
 
-Presently health centers submit UDS data using a tabular format. The submitted data is aggregated at sites and submitted to HRSA using different mechanisms such as uploading files to a portal, submitting via SFTP.The Bureau of Primary Health Care (BPHC) will transition much of the UDS from aggregate data to de-identifeid patient-level data by 2023. The 
+* UDS reporting from Federally Qualified Health Centers (FQHCs) to HRSA
 
-The following are some of the challenges which need to be addressed:
-* Identification of the patient population whose data needs to be submitted
-* Lack of support for the data elements required by HRSA using FHIR APIs
-* Data is present in multiple systems within the health centers and may require aggregation prior to submitting data to HRSA.
+**Use Case 2: Clinical Research Reporting:** 
 
-#### Goals of the Use Case
+There are many research programs that require researchers to track a specific disease and treatment. For example, a researcher studying diabetes outcomes will require labs, medications, approximate timelines but does not require the identity of the individual. This requires PII/PHI to be deidentified and then submitted to the researcher. 
 
-The goal of the use case is to 
+**Use Case 3: AI/ML Model to predict hospital readmissions**
 
-* Enable de-identified patient data submission from health centers to HRSA using FHIR APIs
-* Enable aggregate data submission from health centers to HRSA using FHIR APIs
-* Enable quality measure data submission from health centers to HRSA using FHIR APIs
+As the use of AI/ML models increase new models are being created which need data to predict outcomes such as the number of hospital readmissions expected for the month. These AI models do not require identifiable information but require the clinical encounter information and the context of these encounters which can be achieved by deidentifying the information before submitting to the AI model.
 
-##### Scope of the Use Case
+**Use Case 4: Quality Improvement Initiatives** 
 
-**In-Scope**
+Quality improvement initiatives or programs that are measuring treatment effectiveness, patient outcomes require line level granular data without identity and the patient information has to be deidentified before submission to these quality improvement programs. 
 
-The following requirements are in-scope for the IG.
 
-* Collect data from health centers that receive federal award funds (“awardees”) under the Health Center Program authorized by section 330 of the Public Health Service (PHS) Act (42 U.S.C. 254b) (“section 330”), as amended (including sections 330(e), (g), (h), and (i))
+#### Use Cases for Anonymization 
 
-* Collect data from health centers considered Health Center Program look-alikes. Look-alikes DO NOT receive regular federal funding under section 330 of the PHS Act (although they may receive funding during public health emergencies, such as COVID-19), but meet the Health Center Program requirements for designation under the program (42 U.S.C. 1395x(aa)(4)(A)(ii) and 42 U.S.C. 1396d(l)(2)(B)(ii)).
+**Use Case 1: Federal Agency published disease prevalance statistics:** 
 
-* Collect data from health centers funded under the Health Resources and Services Administration’s (HRSA) Bureau of Health Workforce (BHW)
+Federal Agencies collect data from the states and perform analysis and publish common data sets such as disease prevalence statistics that is an open data set and can be used by the public. This requires anonymization of the data without reidentification risk.  
 
-* Define the requirements for a health center to create and transmit a UDS+ report to HRSA
+**Use Case 2: Datasets released to global researchers:** 
 
-* Identify the data elements to be retrieved from the Data Sources (e.g., EHRs, Data Warehouses etc) to produce reports
+Hospitals, Aggregators, Agencies may wish to release certain datasets to global researchers to enable innovations and studies. These data sets cannot have any reidentification risk and will require anonymization of the data before making the data set and releasing it to the global research community. 
 
-**Out-of-Scope**
+**Use Case 3: Publications in Journals**
 
-* Changes to existing provider workflow or existing data entry mechanisms
-* Policies of the clinical care setting to collect consent for data sharing
+Publishing of data in journals require only aggregated insights and do not require granular PHI/PII details. This can be achieved using anonymization of the data sets without risk of reidentification for studies and then publications. 
 
- 
-#### **User Story #1: Health Center initiates data submission to HRSA using FHIR APIs ** 
+**Use Case 4: Data Sharing with 3rd Party Analytics Vendors** 
 
-At the end of the calendar year, a health center which is a HRSA awardee, has to submit the UDS+ report. The health center uses an EHR as the Data Source for all its data capture, storage and reporting. The Data Source is a certified EHR system and supports the FHIR APIs outlined in Cures Act including Bulk API for exporting data for a population.In order to perform the reporting, the health center identifies the list of all the patients who have availed services that need to be reported to HRSA and creates a Group using the certified FHIR APIs. (Note: For some health centers, it may be all the patients and for others it could be sub-set of the patients). Once the population is identified, the health center extracts the UDS+ data for the patients from the Data Sources (e.g., EHRs) and then de-identifies the data and prepares the data to be submitted in a standard FHIR format. The health center then notifies HRSA about the data readiness and submits the data to HRSA using FHIR APIs.
+Many entities share data with 3rd party analytics vendors to examine population analytics, trends, create interventions based on analytics etc. These situations do not require PHI/PII and the data set should avoid reidentification and hence anonymized data is required to be submitted to these vendors for analytics. 
 
 
-#### UDS+ Data Submission Workflow using FHIR 
+### Service Definitions
 
-The following is a diagram of the workflow for UDS+ reporting using FHIR APIs 
+This section clarifies the basic service definitions specified in the IG and provides the context in which they need to be used.
 
-{% include img.html img="uds-plus-reporting-fhir-workflow.png" caption="Figure 2.1 - UDS+ Reporting Workflow using FHIR" %}
+#### Psuedonymization 
 
-<br/>
+Psuedonymization is the process by which PII/PHI can no longer be attributed to a specific patient without the use of additional information. Psuedonymization does not remove PII/PHI but rather it translates the information into a token. Psuedonymized data is still considered PII/PHI as it can be reidentified with a mapping key.
 
-The description of each step in the above interaction is outlined below:
+For e.g, Patient John Doe may be called as Patient_12345 which is produced by using some kind of mapping key or algorithm and is always linked back to John Doe. 
 
-* Step 1: On an annual basis, the health center kicks off UDS+ reporting job using the Data Submitter. This job initiates an extraction from the data source.
+#### Deidentification 
 
-**Implementation Note** This step is expected to be kicked off by the Health Center or the EHR vendor using a scheduled job or a cron job or a timer. This job will initiate a [Bulk Data Export](http://hl7.org/fhir/uv/bulkdata/OperationDefinition-group-export.html) request from the EHR for the UDS Plus Group.
+Under the HIPAA privacy rule deidentified information is 
+“Health information that does not identify an individual and with respect to which there is no reasonable basis to believe that the information can be used to identify an individual.” - 45 CFR §164.514(a)
 
+Alternately, Deidentification is the process of removing or transforming identifiers so that an individual cannot be readily identified, with a very low risk of re-identification.
 
-* Step 2: The Data Submitter polls the Data Source to check if the extraction has completed. 
+NOTE: There are deidentification use cases which may require reidentification and are reidentification is performed in controlled circumstances. 
 
-**Implementation Note** This step is performed using the [Bulk Data Status Request]({{site.data.fhir.ver.bulkig}}/export/index.html#bulk-data-status-request).
+For e.g, Patient John Does data will not have any patient identifier or name. 
 
-* Step 3: The Data Source provides the extracted data in an identified form by storing them in the Bulk Data Storage.
+According to [HHS Safe Harbor Guidance](https://www.hhs.gov/hipaa/for-professionals/special-topics/de-identification/index.html) 18 different Patient related attributes should be removed for the data to be called deidentified data. These attributes that need to be removed are specified in the [HHS Safe Harbor Deidentification Standard](https://www.hhs.gov/hipaa/for-professionals/special-topics/de-identification/index.html#standard) and are listed here for convenience.
 
-**Implementation Note** This step is implemented by the EHR based on their internal implementation on how and where to store the data for download. Once the data is stored the links are submitted to the Data Submitter for download. 
+A) Names
+B) Addresses and geographic locations
+C) Dates
+D) Telephone numbers
+E) Fax numbers
+F) Email Addresses
+G) Social Security numbers
+H) Medical Record numbers
+I) Health plan beneficiary numbers
+J) Account numbers
+K) Certificate/license numbers 
+L) Vehicle identifiers and license plate numbers
+M) Device Identifiers and serial numbers
+N) Web Universal Resource Locators (URLs)
+O) Internet Protocol (IP) Addressess
+P) Biometric identifiers including finger and voice prints
+Q) Full-face photographs and comparable images
+R) Any other unique identifying characteristic, code of the individual
 
-* Step 4: The Data Submitter checks completion status and gets notified of the data extracted. 
 
-**Implementation Note** This step is performed using the [Bulk Data Status Request]({{site.data.fhir.ver.bulkig}}/export/index.html#bulk-data-status-request).
+##### Reidentification of deidentified information 
 
-* Step 5: The Data Submitter accesses the data from the Bulk Data Storage.
+During the deidentification process, the assignment of a unique code to the set of de-identified health information to permit re-identification is the prescribed method of reidentifying information. The entity that is submitting the deidentified information is responsible to protect the reidentified information as per organization, local, state and federal policies.
 
-**Implementation Note** This step is happening within the environment (behind the firewall) of the Health Center and the data is downloaded using the [Bulk Data File Request]({{site.data.fhir.ver.bulkig}}/export/index.html#file-request)
 
-* Step 6: The Data Submitter submits the data for de-identification to the Trust Service Provider.
+#### Anonymization 
 
-**Implementation Note** This step is performed by the Data Submitter by invoking the de-identify operation of the [Trust Service Provider](spec.html#trust-service-provider-requirements)
+Anonymization is the irreversible process of transforming data so that individuals cannot be identified by any reasonably likely means, now or in the future. In other words, data is anonymous if individuals are not identifiable, taking into account all means “reasonably likely” to be used to identify the person. 
 
-* Step 7: The Trust Service Provider submits the de-identified data back to the Data Submitter.
+For e.g, Consider John Doe a male patient with an age of 56 with diabetes needs to be included in a specific data set. John Doe's record would be included in a data set without any identifying information such as names, date of birth. Instead John Doe's record would be included in an age group between 50 and 60 consisting of many individuals with Diabetes who are males. Location information would be generalized from a specific address to a large geographical area such as one or more states or the entire country. The more number of individuals with similar characteristics the lower the risk of identification. Rare diseases would be combined into a group such as "Other" to avoid identification.
 
-* Step 8: The Data Submitter persists the data for HRSA in a Bulk Data Storage and creates links for HRSA to download the data.
 
-**Implementation Note** This data may be persisted outside of the EHR environment or within the EHR environment depending on the EHR. 
+### Summary of differences between the various services
 
-* Step 9: The Data Submitter notifies the Data Receiver (HRSA) about the readiness of the data and provides the secured links to the Data Receiver for download. The Data Submitter provides a Content Location that can be polled by the Data Submitter to check on the status of the data submission.
+The table below summarizes the differences between the above three services
 
-**Implementation Note** The Data Submitter creates the [Manifest file](StructureDefinition-uds-plus-import-manifest.html) and then notifies the HRSA system of the availability of the files using the [$import](OperationDefinition-import.html) operation. The Data Receiver creates a Content Location where the status of the upload is updated as the download progresses. The status fields will provide one of the following values "submitted, inprogress, completed, failed".
 
-* Step 10a: The Data Receiver downloads the data from the health center Bulk Data Storage and then proceeds with downstream processing. 
+{% include ServiceCharacteristics.html %} 
 
-**Implementation Note** The Data Receiver downloads the bulk files using the appropriate protocols and authorization. Currently this is done with HTTP protocols and using secured signed links. 
 
-* Step 10b: The Data Submitter polls the Content Location provided in Step 9, to check on the status of the submission.  
+### Use Cases Mapped to Services 
 
-**Implementation Note** The Data Receiver provides an update on the status of the submission and may include a list of errors and warnings for the submission. If the submission status is failed, the Data Submitter has to re-submit the data after addressing the errors provided by the Data Receiver. 
+The table below summarizes the what services to consider for the different kind of use cases
 
-#### Alternative Approaches for Steps 1 through 8
+{% include ServiceUsage.html %} 
 
-The proposed solution above leverages already existing standards implemented by CEHRT systems namely the Bulk API Group Export and the US Core profiles. However implementations may choose to use other methods to export data and de-identify the data. Health Centers and their technology vendors may choose any other method to export the necessary data from the data source and may use any algorithm to de-identify the data. Usage of the above workflow enables more standardization over time within the health center and less dependence of proprietary solutions for creating the UDS+ report.  
 
-#### Resubmissions of UDS+ reports
+### Identification Risk
 
-Health Centers from time to time may submit a UDS+ report that is erroneous in terms of 
+The risk of identification when using the above services has to be ascertained by the healthcare organization releasing or providing the data based on the use case. The following are links that provide valuable industry regulations and guidance for risk assessments
 
-* Data
-* Links
-* Conformance to the IG 
+* [HHS HIPAA Deidentification Guidance](https://www.hhs.gov/hipaa/for-professionals/special-topics/de-identification/index.html) 
+* [NIST Guidance](https://www.nist.gov/itl/iad/deidentification) 
+* [NIST IR 8053 for Deidentification](https://csrc.nist.gov/pubs/ir/8053/final)
 
-In some or all of the above cases, the Data Receiver will submit a list of errors in the submission. These errors need to be addressed by the Health Center and then resubmit the UDS+ report. Within the allowed reporting timeframe, a health center may resubmit the report multiple times. The resubmission should be a full data set resubmission. All submissions prior to the latest submission will be discarded and will not be considered for Health Center UDS+ reporting. 
 
-
-#### UDS+ Actors/Systems and Definitions
-
-The following actors and definitions are used by the UDS+ use cases. 
-
-**Data Sources** The Data Source is a software system that is used to capture and store the patients electronic medical record which contains information such as patient demographics, medications, procedures, allergies, diagnosis, problems etc. Examples of Data Sources include EHRs, Data Warehouses etc. The Data Source is responsible for providing interfaces to extract patient data.
- 
-**Data Receiver** The Data Receiver is the HRSA organization. The data receiver is responsible for receiving the health center data, validate it and transform it for consumption by HRSA systems.
-
-**Data Submitter** The Data Submitter system is responsible for extracting the data for the patients whose data need to be submitted to HRSA, de-identify the data and then notify about the readiness of the data to the Data Receiver. 
-
-**Trust Service Provider** The Trust Service Provider actor provides an API for de-identifying the patient data and creating the necessary linkages across the resources. 
-
-
-#### UDS+ Deployment Configurations 
-
-This section identifies how a health center may deploy the various UDS+ actors and systems and combine or split them for efficiency. 
-
-##### Data Source, Data Submitter and Trust Service Provider are combined in a single system
-
-In this scenario a Data Source (e.g., Certified EHR) may implement the required functionality to support UDS+ reporting completely and may not require any additional systems. This deployment option is shown in the figure below 
- 
-{% include img.html img="combined-actor-deployment.png" caption="Figure 2.3 - Data Source implementing both Data Submitter and Trust Service Provider to support UDS+ reporting" %}
-
-Health Centers are advised to coordinate with their Data Source (e.g., EHR) vendors to understand their existing capabilities and determine if this option is available.
-
-##### Data Source provided de-identified data
-
-In this scenario a Data Source (e.g., Certified EHR) may implement the required functionality to support UDS+ reporting by extracting the necessary data in a de-identified form. In this deployment, the Health Center has to use a different system to act as the Data Submitter which receives the de-identified data extracts and then submits the data to HRSA. This deployment option is shown in the figure below 
- 
-{% include img.html img="data-source-plus-trust-deployment.png" caption="Figure 2.4 - Data Source implementing  Trust Service Provider to support UDS+ reporting" %}
-
-Health Centers are advised to coordinate with their Data Source (e.g., EHR) vendors to understand their existing capabilities and determine if this option is available.
- 
-##### Data Source and Data Submitter combined but requires an external Trust Service Provider 
-
-In this scenario a Data Source (e.g., Certified EHR) may implement the required functionality to support UDS+ reporting by extracting the necessary data and is capable of submitting the data to HRSA. However the Data Source may not be able to de-identify the data and may require an external service to de-identify the data. In this deployment, the Health Center has to use a different system to de-identify the data and then provide the data back to the Data Source/Data Submitter. This deployment option is shown in the figure below 
- 
-{% include img.html img="data-source-plus-data-submitter-deployment.png" caption="Figure 2.5 - Data Source implementing Data Submitter to support UDS+ reporting" %}
-
-Health Centers are advised to coordinate with their Data Source (e.g., EHR) vendors to understand their existing capabilities and determine if this option is available.
- 
- 

@@ -12,7 +12,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
 	  <valueInteger value="1"/>
   </extension>
-  <url value="http://hl7.org/fhir/us/dapl/ImplementationGuide/dapl"/>
+  <url value="http://hl7.org/fhir/us/darts/ImplementationGuide/darts"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
   <version value="0.1.0"/>
   <name value="DARTS"/>
@@ -34,7 +34,7 @@
       <code value="US"/>
     </coding>
   </jurisdiction>
-  <packageId value="hl7.fhir.us.dapl"/>
+  <packageId value="hl7.fhir.us.darts"/>
   <!-- This should be changed to 'not-open-source' or another license if appropriate for non-HL7-published content -->
   <license value="CC0-1.0"/>
   <!-- This is whatever FHIR version(s) the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
@@ -62,62 +62,6 @@
     <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
       inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
  
-  <resource>
-      <reference>
-        <reference value="Patient/example"/>
-      </reference>
-      <name value="US Core Patient Example"/>
-      <description value="An Example of a conformant US Core Patient resource with identifiable information."/>
-      <exampleBoolean value="true"/>
-   </resource>
-   <resource>
-      <reference>
-        <reference value="Practitioner/example"/>
-      </reference>
-      <name value="US Core Practitioner Example"/>
-      <description value="An Example of a conformant US Core Practitioner resource with identifiable information."/>
-      <exampleBoolean value="true"/>
-   </resource>
-   <resource>
-      <reference>
-        <reference value="Location/hospital"/>
-      </reference>
-      <name value="US Core Location Example"/>
-      <description value="An Example of a conformant US Core Location resource with identifiable information."/>
-      <exampleBoolean value="true"/>
-   </resource>
-   <resource>
-      <reference>
-        <reference value="Organization/holy-healthcare"/>
-      </reference>
-      <name value="US Core Healthcare Organization Example"/>
-      <description value="An Example of a conformant US Core Healthcare Organization resource with identifiable information."/>
-      <exampleBoolean value="true"/>
-   </resource>
-   <resource>
-      <reference>
-        <reference value="Parameters/reporting-parameters-example"/>
-      </reference>
-      <name value="UDS Plus Reporting Parameters Example"/>
-      <description value="An Example of a conformant UDS Plus Reporting Parameters resource with de-identifeid information."/>
-      <exampleBoolean value="true"/>
-   </resource>
-   <resource>
-      <reference>
-        <reference value="Parameters/de-identify-data-operation-urls-example"/>
-      </reference>
-      <name value="UDS Plus Parameters Example for $deidentify operation"/>
-      <description value="An Example of a conformant UDS Plus Parameters resource for sending input and receiving output from $deidentify operation."/>
-      <exampleBoolean value="true"/>
-   </resource>   
-   <resource>
-      <reference>
-        <reference value="RelatedPerson/de-identified-example"/>
-      </reference>
-      <name value="UDS Plus RelatedPerson Example"/>
-      <description value="An Example of a conformant UDS Plus Related Person resource with de-identified information."/>
-      <exampleBoolean value="true"/>
-   </resource>  
    
   
 
@@ -134,7 +78,7 @@
           <valueCode value="trial-use"/> 
         </extension>
         <nameUrl value="index.html"/>
-        <title value="UDS Plus Home Page"/>
+        <title value="DARTS Home Page"/>
         <generation value="html"/>
       </page>
       <page>
@@ -150,7 +94,7 @@
           <valueCode value="trial-use"/> 
         </extension> 
         <nameUrl value="spec.html"/>
-        <title value="FHIR API Reporting Specification"/>
+        <title value="FHIR API Specification"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -164,7 +108,7 @@
       <page>
       	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
           <valueCode value="trial-use"/> 
-	</extension>
+	      </extension>
         <nameUrl value="usecases.html"/>
         <title value="Use Cases and Workflows"/>
         <generation value="markdown"/>
@@ -175,22 +119,6 @@
         </extension>
         <nameUrl value="changes.html"/>
         <title value="Change History"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-      	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-          <valueCode value="trial-use"/> 
-        </extension>
-        <nameUrl value="dataelements.html"/>
-        <title value="Data Elements and FHIR Mappings"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-      	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-          <valueCode value="trial-use"/> 
-        </extension>
-        <nameUrl value="reportingguidance.html"/>
-        <title value="Reporting Guidance"/>
         <generation value="markdown"/>
       </page>
       <page>
