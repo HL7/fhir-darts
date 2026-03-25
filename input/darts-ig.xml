@@ -94,7 +94,7 @@
           <valueCode value="trial-use"/> 
         </extension> 
         <nameUrl value="spec.html"/>
-        <title value="FHIR API Specification"/>
+        <title value="DARTS Services Specification"/>
         <generation value="markdown"/>
       </page>
       <page>

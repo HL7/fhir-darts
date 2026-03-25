@@ -21,10 +21,10 @@
   </p>
   <ul>
     <li>
-      <a href="background.html">Background</a> - The page provides introduction and definitions for deidentification, psuedonymization and anonymization.
+      <a href="background.html">Background</a> - The page provides introduction and provides the requirements in scope for the IG.
     </li>
     <li>
-      <a href="usecases.html">Use Cases</a> - Defines the  use case, workflows, actors and systems that will be used as part of the IG.
+      <a href="usecases.html">Use Cases</a> - Defines the  use case, workflows and definitions that will be used as part of the IG.
     </li>
     <li>
       <a href="spec.html">Formal Specification</a> - Defines the  formal specification in terms of requirements that need to be implemented by a service provider.
