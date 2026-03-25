@@ -1,8 +1,6 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
   <!-- The spaces between the open and close "a" tag are mandatory.  (Cuz HTML renderers are dumb...) -->
-  
-  <a style="background-color:Tomato;color:White;"><b>Note about Canoncial URLs in IG:</b> All canonical (Official) URLs such as the one above http://hl7.org/fhir/us/uds-plus/ImplementationGuide/udsplus will be changed in the future and are not available currently on the web.</a>
-  
+    
   
   <a name="intro"> </a>
   <h3>Introduction</h3>
