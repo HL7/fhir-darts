@@ -20,27 +20,43 @@
   <type value="false"/>
   <instance value="false"/>
   <parameter>
-    <name value="inputFileUrls"/>
+    <name value="identifiableDataFileUrls"/>
     <use value="in"/>
-    <min value="1"/>
-    <max value="*"/>
+    <min value="0"/>
+    <max value="1"/>
     <documentation value="Urls of the Input Files represented as Parameters, with the type of Resource and the URL to the NDJSON data."/>
     <type value="Parameters"/>
+  </parameter>
+  <parameter>
+    <name value="identifiableData"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Bundle containing identifiable data for one or more patients."/>
+    <type value="Bundle"/>
   </parameter>
   <parameter>
     <name value="policy"/>
     <use value="in"/>
     <min value="1"/>
     <max value="1"/>
-    <documentation value="Policy Parameter indicating the deidentification method to use."/>
+    <documentation value="Policy Parameter indicating the de-identification method to use."/>
     <type value="string"/>
   </parameter>
   <parameter>
-    <name value="deidentifiedFileUrls"/>
+    <name value="deidentifiedDataFileUrls"/>
     <use value="out"/>
     <min value="0"/>
-    <max value="*"/>
-    <documentation value="Upon successful de-identification, the de-identified file Urls is returned back from the service."/>
+    <max value="1"/>
+    <documentation value="Upon successful de-identification, the de-identified file Urls is returned back from the service.This output would be returned when the input is a set of NDJSON FileUrls only."/>
     <type value="Parameters"/>
+  </parameter>
+  <parameter>
+    <name value="deidentifiedData"/>
+    <use value="out"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Upon successful de-identification, the de-identified data is returned back from the service. This output would be returned when the input is a bundle only."/>
+    <type value="Bundle"/>
   </parameter>
 </OperationDefinition>

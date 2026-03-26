@@ -52,6 +52,15 @@
 	<p>
 	This implementation guide complements the the De-identified, Anonymized FHIR Profiles Library (DAPL) Implmentation Guide by defining the services that implement techniques and algorithms for deidentification and anonymization, where as the DAPL IG defines the set of profiles to represent the deidentified and anonymized information.
     </p>
+    
+
+    <div>
+        <p>The following is a diagram that shows the relationship between US Core, DARTS IG and DAPL IG.</p>
+  		<img src="darts-dapl-context.png" alt="US Core, DARTS and DAPL IG relationship diagram"/>
+	</div>
+
+	<br/>
+    
 	<a name="ds4p-relationship"> </a>
 	<h4>Relationship to Data Segmentation for Privacy (DS4P) Implmentation Guide</h4>
 	<p>

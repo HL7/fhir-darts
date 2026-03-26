@@ -57,6 +57,12 @@
     <packageId value="us.cdc.phinvads" />
     <version value="0.12.0" />
   </dependsOn>
+  
+  <dependsOn id="daplIg">
+    <uri value="http://hl7.org/fhir/us/dapl/ImplementationGuide/hl7.fhir.us.dapl" />
+    <packageId value="hl7.fhir.us.dapl" />
+    <version value="current" />
+  </dependsOn>
 
   <definition>
     <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
@@ -138,6 +144,94 @@
         <generation value="markdown"/>
       </page>
     </page>
+    
+     
+    <parameter>
+      <code value="no-narrative"/>
+      <value value="Bundle/dapl-deidentified-bundle"/>
+    </parameter> 
+    <parameter>
+      <code value="no-narrative"/>
+      <value value="Patient/patient-01"/>
+    </parameter>
+    <parameter>
+      <code value="no-narrative"/>
+      <value value="Patient/patient-02"/>
+    </parameter>
+    <parameter>
+      <code value="no-narrative"/>
+      <value value="Patient/patient-03"/>
+    </parameter>
+    <parameter>
+      <code value="no-narrative"/>
+      <value value="Patient/patient-04"/>
+    </parameter>
+    <parameter>
+      <code value="no-narrative"/>
+      <value value="Patient/patient-05"/>
+    </parameter>
+    <parameter>
+      <code value="no-narrative"/>
+      <value value="Patient/patient-06"/>
+    </parameter>
+    <parameter>
+      <code value="no-narrative"/>
+      <value value="Patient/patient-07"/>
+    </parameter>
+    <parameter>
+      <code value="no-narrative"/>
+      <value value="Patient/patient-08"/>
+    </parameter>
+    <parameter>
+      <code value="no-narrative"/>
+      <value value="Patient/patient-09"/>
+    </parameter>
+    <parameter>
+      <code value="no-narrative"/>
+      <value value="Patient/patient-10"/>
+    </parameter>
+    <parameter>
+      <code value="no-narrative"/>
+      <value value="Condition/condition-01"/>
+    </parameter>
+    <parameter>
+      <code value="no-narrative"/>
+      <value value="Condition/condition-02"/>
+    </parameter>
+    <parameter>
+      <code value="no-narrative"/>
+      <value value="Condition/condition-03"/>
+    </parameter>
+    <parameter>
+      <code value="no-narrative"/>
+      <value value="Condition/condition-04"/>
+    </parameter>
+    <parameter>
+      <code value="no-narrative"/>
+      <value value="Condition/condition-05"/>
+    </parameter>
+    <parameter>
+      <code value="no-narrative"/>
+      <value value="Condition/condition-06"/>
+    </parameter>
+    <parameter>
+      <code value="no-narrative"/>
+      <value value="Condition/condition-07"/>
+    </parameter>
+    <parameter>
+      <code value="no-narrative"/>
+      <value value="Condition/condition-08"/>
+    </parameter>
+    <parameter>
+      <code value="no-narrative"/>
+      <value value="Condition/condition-09"/>
+    </parameter>
+    <parameter>
+      <code value="no-narrative"/>
+      <value value="Condition/condition-10"/>
+    </parameter>
+    
+    
     <!-- copyright year is a mandatory parameter -->
     <parameter>
       <code value="copyrightyear"/>
@@ -156,6 +250,8 @@
       <code value="path-expansion-params"/>
       <value value="terminology-settings.json"/>
     </parameter>
+    
+    
     
   </definition>
 </ImplementationGuide>

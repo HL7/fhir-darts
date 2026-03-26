@@ -1,0 +1,1573 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-with-psuedonymized-date",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "http://example.org/Patient/patient-9c270bdf290ab0d4",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-9c270bdf290ab0d4",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>US Core Patient (Pseudonymized)</b></p><p>Pseudonym: 9c270bdf290ab0d44faecf35be2777bcbefd66778480f4663d86740003dd092a</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/fhir/pseudonym",
+            "value": "9c270bdf290ab0d44faecf35be2777bcbefd66778480f4663d86740003dd092a"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "masked"
+              }
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1932-02-14",
+        "address": [
+          {
+            "use": "home",
+            "postalCode": "03601",
+            "line": [
+              "101 Oak Street"
+            ],
+            "city": "Springfield",
+            "state": "MA",
+            "country": "US"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Condition/condition-9c270bdf290ab0d4",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-9c270bdf290ab0d4",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>US Core Condition Problems and Health Concerns</b></p><p>Diabetes</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "44054006",
+              "display": "Diabetes mellitus type 2 (disorder)"
+            }
+          ],
+          "text": "Diabetes"
+        },
+        "subject": {
+          "reference": "Patient/patient-9c270bdf290ab0d4"
+        },
+        "onsetDateTime": "2018-01-15",
+        "asserter": {
+          "reference": "Practitioner/practitioner-01",
+          "display": "Alice Nguyen"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Patient/patient-1369392dcab866cc",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-1369392dcab866cc",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>US Core Patient (Pseudonymized)</b></p><p>Pseudonym: 1369392dcab866cce7ef22d60aa0b0e3c218c58e3c343f5fbd636ce30ac369f6</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/fhir/pseudonym",
+            "value": "1369392dcab866cce7ef22d60aa0b0e3c218c58e3c343f5fbd636ce30ac369f6"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "masked"
+              }
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1931-11-08",
+        "address": [
+          {
+            "use": "home",
+            "postalCode": "02532",
+            "line": [
+              "202 Pine Avenue"
+            ],
+            "city": "Riverside",
+            "state": "CA",
+            "country": "US"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Condition/condition-1369392dcab866cc",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-1369392dcab866cc",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>US Core Condition Problems and Health Concerns</b></p><p>CKD</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "709044004",
+              "display": "Chronic kidney disease (disorder)"
+            }
+          ],
+          "text": "CKD"
+        },
+        "subject": {
+          "reference": "Patient/patient-1369392dcab866cc"
+        },
+        "onsetDateTime": "2019-03-10",
+        "asserter": {
+          "reference": "Practitioner/practitioner-02",
+          "display": "Brian Patel"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Patient/patient-2295f099765aa28a",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-2295f099765aa28a",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>US Core Patient (Pseudonymized)</b></p><p>Pseudonym: 2295f099765aa28a9c0b9c041b23c6a49a24c1ef621da8d6cc106151015c0c5b</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/fhir/pseudonym",
+            "value": "2295f099765aa28a9c0b9c041b23c6a49a24c1ef621da8d6cc106151015c0c5b"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "masked"
+              }
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1975-06-21",
+        "address": [
+          {
+            "use": "home",
+            "postalCode": "560001",
+            "line": [
+              "303 Maple Lane"
+            ],
+            "city": "Austin",
+            "state": "TX",
+            "country": "US"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Condition/condition-2295f099765aa28a",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-2295f099765aa28a",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>US Core Condition Problems and Health Concerns</b></p><p>Diabetes</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "44054006",
+              "display": "Diabetes mellitus type 2 (disorder)"
+            }
+          ],
+          "text": "Diabetes"
+        },
+        "subject": {
+          "reference": "Patient/patient-2295f099765aa28a"
+        },
+        "onsetDateTime": "2020-06-21",
+        "asserter": {
+          "reference": "Practitioner/practitioner-03",
+          "display": "Carla Smith"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Patient/patient-f7557a4583e382a0",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-f7557a4583e382a0",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>US Core Patient (Pseudonymized)</b></p><p>Pseudonym: f7557a4583e382a02c6e282a5505107469150a4b6cc7facd667985c6858f9ee7</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/fhir/pseudonym",
+            "value": "f7557a4583e382a02c6e282a5505107469150a4b6cc7facd667985c6858f9ee7"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "masked"
+              }
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1980-09-13",
+        "address": [
+          {
+            "use": "home",
+            "postalCode": "560014",
+            "line": [
+              "404 Cedar Road"
+            ],
+            "city": "Miami",
+            "state": "FL",
+            "country": "US"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Condition/condition-f7557a4583e382a0",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-f7557a4583e382a0",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>US Core Condition Problems and Health Concerns</b></p><p>CKD</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "709044004",
+              "display": "Chronic kidney disease (disorder)"
+            }
+          ],
+          "text": "CKD"
+        },
+        "subject": {
+          "reference": "Patient/patient-f7557a4583e382a0"
+        },
+        "onsetDateTime": "2021-02-11",
+        "asserter": {
+          "reference": "Practitioner/practitioner-01",
+          "display": "Alice Nguyen"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Patient/patient-c1f0cee075c6e3c8",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-c1f0cee075c6e3c8",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>US Core Patient (Pseudonymized)</b></p><p>Pseudonym: c1f0cee075c6e3c863e563eafec42e87b616de5c3fc4dab85071ddebc71e9ddd</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/fhir/pseudonym",
+            "value": "c1f0cee075c6e3c863e563eafec42e87b616de5c3fc4dab85071ddebc71e9ddd"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "masked"
+              }
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1968-01-30",
+        "address": [
+          {
+            "use": "home",
+            "postalCode": "560034",
+            "line": [
+              "505 Birch Drive"
+            ],
+            "city": "Seattle",
+            "state": "WA",
+            "country": "US"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Condition/condition-c1f0cee075c6e3c8",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-c1f0cee075c6e3c8",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>US Core Condition Problems and Health Concerns</b></p><p>Diabetes</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "44054006",
+              "display": "Diabetes mellitus type 2 (disorder)"
+            }
+          ],
+          "text": "Diabetes"
+        },
+        "subject": {
+          "reference": "Patient/patient-c1f0cee075c6e3c8"
+        },
+        "onsetDateTime": "2017-09-05",
+        "asserter": {
+          "reference": "Practitioner/practitioner-02",
+          "display": "Brian Patel"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Patient/patient-caa8c5308dbb2e70",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-caa8c5308dbb2e70",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>US Core Patient (Pseudonymized)</b></p><p>Pseudonym: caa8c5308dbb2e704aa4932b3dec241e168d4fadfa5a518caf4a20780c4f8d3e</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/fhir/pseudonym",
+            "value": "caa8c5308dbb2e704aa4932b3dec241e168d4fadfa5a518caf4a20780c4f8d3e"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "masked"
+              }
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1972-04-27",
+        "address": [
+          {
+            "use": "home",
+            "postalCode": "560076",
+            "line": [
+              "606 Elm Street"
+            ],
+            "city": "Denver",
+            "state": "CO",
+            "country": "US"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Condition/condition-caa8c5308dbb2e70",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-caa8c5308dbb2e70",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>US Core Condition Problems and Health Concerns</b></p><p>CKD</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "709044004",
+              "display": "Chronic kidney disease (disorder)"
+            }
+          ],
+          "text": "CKD"
+        },
+        "subject": {
+          "reference": "Patient/patient-caa8c5308dbb2e70"
+        },
+        "onsetDateTime": "2016-12-19",
+        "asserter": {
+          "reference": "Practitioner/practitioner-03",
+          "display": "Carla Smith"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Patient/patient-d424f6489bd37379",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-d424f6489bd37379",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>US Core Patient (Pseudonymized)</b></p><p>Pseudonym: d424f6489bd37379cb91d913565d17aa177010b694cf607c919e9855178ccd5c</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/fhir/pseudonym",
+            "value": "d424f6489bd37379cb91d913565d17aa177010b694cf607c919e9855178ccd5c"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "masked"
+              }
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1985-12-05",
+        "address": [
+          {
+            "use": "home",
+            "postalCode": "560099",
+            "line": [
+              "707 Walnut Street"
+            ],
+            "city": "Chicago",
+            "state": "IL",
+            "country": "US"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Condition/condition-d424f6489bd37379",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-d424f6489bd37379",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>US Core Condition Problems and Health Concerns</b></p><p>Diabetes</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "44054006",
+              "display": "Diabetes mellitus type 2 (disorder)"
+            }
+          ],
+          "text": "Diabetes"
+        },
+        "subject": {
+          "reference": "Patient/patient-d424f6489bd37379"
+        },
+        "onsetDateTime": "2022-04-30",
+        "asserter": {
+          "reference": "Practitioner/practitioner-01",
+          "display": "Alice Nguyen"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Patient/patient-098587a439372c28",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-098587a439372c28",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>US Core Patient (Pseudonymized)</b></p><p>Pseudonym: 098587a439372c2877d8e59f1819e1642997c641792c34133333d764fca7cba6</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/fhir/pseudonym",
+            "value": "098587a439372c2877d8e59f1819e1642997c641792c34133333d764fca7cba6"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "masked"
+              }
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1990-07-19",
+        "address": [
+          {
+            "use": "home",
+            "postalCode": "90210",
+            "line": [
+              "808 Cherry Court"
+            ],
+            "city": "Phoenix",
+            "state": "AZ",
+            "country": "US"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Condition/condition-098587a439372c28",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-098587a439372c28",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>US Core Condition Problems and Health Concerns</b></p><p>CKD</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "709044004",
+              "display": "Chronic kidney disease (disorder)"
+            }
+          ],
+          "text": "CKD"
+        },
+        "subject": {
+          "reference": "Patient/patient-098587a439372c28"
+        },
+        "onsetDateTime": "2015-08-14",
+        "asserter": {
+          "reference": "Practitioner/practitioner-02",
+          "display": "Brian Patel"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Patient/patient-f3decbc702e525a8",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-f3decbc702e525a8",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>US Core Patient (Pseudonymized)</b></p><p>Pseudonym: f3decbc702e525a8d80021022c41092f214c99fb1be50c4dd9377d53d2996dc5</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/fhir/pseudonym",
+            "value": "f3decbc702e525a8d80021022c41092f214c99fb1be50c4dd9377d53d2996dc5"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "masked"
+              }
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1978-03-11",
+        "address": [
+          {
+            "use": "home",
+            "postalCode": "30301",
+            "line": [
+              "909 Aspen Way"
+            ],
+            "city": "Boston",
+            "state": "MA",
+            "country": "US"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Condition/condition-f3decbc702e525a8",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-f3decbc702e525a8",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>US Core Condition Problems and Health Concerns</b></p><p>CKD</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "709044004",
+              "display": "Chronic kidney disease (disorder)"
+            }
+          ],
+          "text": "CKD"
+        },
+        "subject": {
+          "reference": "Patient/patient-f3decbc702e525a8"
+        },
+        "onsetDateTime": "2014-10-01",
+        "asserter": {
+          "reference": "Practitioner/practitioner-03",
+          "display": "Carla Smith"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Patient/patient-db088eafefc824dc",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-db088eafefc824dc",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>US Core Patient (Pseudonymized)</b></p><p>Pseudonym: db088eafefc824dc78e0c191539141a1d613ba94f601214d8089861cfab791ce</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://example.org/fhir/pseudonym",
+            "value": "db088eafefc824dc78e0c191539141a1d613ba94f601214d8089861cfab791ce"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "masked"
+              }
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1988-10-02",
+        "address": [
+          {
+            "use": "home",
+            "postalCode": "60614",
+            "line": [
+              "111 Willow Place"
+            ],
+            "city": "Nashville",
+            "state": "TN",
+            "country": "US"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Condition/condition-db088eafefc824dc",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-db088eafefc824dc",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>US Core Condition Problems and Health Concerns</b></p><p>Diabetes</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "44054006",
+              "display": "Diabetes mellitus type 2 (disorder)"
+            }
+          ],
+          "text": "Diabetes"
+        },
+        "subject": {
+          "reference": "Patient/patient-db088eafefc824dc"
+        },
+        "onsetDateTime": "2023-05-08",
+        "asserter": {
+          "reference": "Practitioner/practitioner-01",
+          "display": "Alice Nguyen"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Practitioner/practitioner-01",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "practitioner-01",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>US Core Practitioner</b></p><p>Alice Nguyen</p><p>NPI: 1234567895</p></div>"
+        },
+        "active": true,
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "3412549073"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Nguyen",
+            "given": [
+              "Alice"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Practitioner/practitioner-02",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "practitioner-02",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>US Core Practitioner</b></p><p>Brian Patel</p><p>NPI: 2345678901</p></div>"
+        },
+        "active": true,
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "1245319599"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Patel",
+            "given": [
+              "Brian"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Practitioner/practitioner-03",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "practitioner-03",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'><p><b>US Core Practitioner</b></p><p>Carla Smith</p><p>NPI: 3456789019</p></div>"
+        },
+        "active": true,
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "9941339100"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Smith",
+            "given": [
+              "Carla"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

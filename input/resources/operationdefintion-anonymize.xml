@@ -20,12 +20,20 @@
   <type value="false"/>
   <instance value="false"/>
   <parameter>
-    <name value="inputFileUrls"/>
+    <name value="identifiableDataFileUrls"/>
     <use value="in"/>
-    <min value="1"/>
-    <max value="*"/>
+    <min value="0"/>
+    <max value="1"/>
     <documentation value="Urls of the Input Files represented as Parameters, with the type of Resource and the URL to the NDJSON data."/>
     <type value="Parameters"/>
+  </parameter>
+  <parameter>
+    <name value="identifiableData"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Bundle containing identifiable data for one or more patients."/>
+    <type value="Bundle"/>
   </parameter>
   <parameter>
     <name value="anonymizedFileUrls"/>
@@ -34,5 +42,13 @@
     <max value="*"/>
     <documentation value="Upon successful anonymization, the anonymized file Urls is returned back from the service."/>
     <type value="Parameters"/>
+  </parameter>
+  <parameter>
+    <name value="anonymizedData"/>
+    <use value="out"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Upon successful anonymization, the anonymized data is returned back from the service. This output would be returned when the input is a bundle only."/>
+    <type value="Bundle"/>
   </parameter>
 </OperationDefinition>

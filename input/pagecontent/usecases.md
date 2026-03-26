@@ -64,24 +64,25 @@ For e.g, Patient John Does data will not have any patient identifier or name.
 
 According to [HHS Safe Harbor Guidance](https://www.hhs.gov/hipaa/for-professionals/special-topics/de-identification/index.html) 18 different Patient related attributes should be removed for the data to be called deidentified data. These attributes that need to be removed are specified in the [HHS Safe Harbor Deidentification Standard](https://www.hhs.gov/hipaa/for-professionals/special-topics/de-identification/index.html#standard) and are listed here for convenience.
 
-A) Names
-B) Addresses and geographic locations
-C) Dates
-D) Telephone numbers
-E) Fax numbers
-F) Email Addresses
-G) Social Security numbers
-H) Medical Record numbers
-I) Health plan beneficiary numbers
-J) Account numbers
-K) Certificate/license numbers 
-L) Vehicle identifiers and license plate numbers
-M) Device Identifiers and serial numbers
-N) Web Universal Resource Locators (URLs)
-O) Internet Protocol (IP) Addressess
-P) Biometric identifiers including finger and voice prints
-Q) Full-face photographs and comparable images
-R) Any other unique identifying characteristic, code of the individual
+
+* Names
+* Addresses and geographic locations
+* Dates
+* Telephone numbers
+* Fax numbers
+* Email Addresses
+* Social Security numbers
+* Medical Record numbers
+* Health plan beneficiary numbers
+* Account numbers
+* Certificate/license numbers 
+* Vehicle identifiers and license plate numbers
+* Device Identifiers and serial numbers
+* Web Universal Resource Locators (URLs)
+* Internet Protocol (IP) Addressess
+* Biometric identifiers including finger and voice prints
+* Full-face photographs and comparable images
+* Any other unique identifying characteristic, code of the individual
 
 
 ##### Reidentification of deidentified information 
