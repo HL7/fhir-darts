@@ -14,7 +14,7 @@
   </extension>
   <url value="http://hl7.org/fhir/us/darts/ImplementationGuide/darts"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
-  <version value="0.1.0"/>
+  <version value="1.0.0-ballot"/>
   <name value="DARTS"/>
   <title value="De-Identification, Anonymization, Redaction Toolkit Services"/>
   <status value="active"/>
