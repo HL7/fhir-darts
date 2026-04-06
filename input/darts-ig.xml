@@ -19,7 +19,7 @@
   <title value="De-Identification, Anonymization, Redaction Toolkit Services"/>
   <status value="active"/>
   <experimental value="false"/>
-  <publisher value="HL7 International / Cross Group Projects"/>
+  <publisher value="HL7 International / Cross-Group Projects"/>
   <contact>
     <telecom>
       <!-- Or whatever URL and/or email address(es) are appropriate -->
@@ -52,12 +52,6 @@
     <version value="0.24.0" />
   </dependsOn>
   
-  <dependsOn id="uscdcphinvads">
-    <uri value="http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.cdc.phinvads" />
-    <packageId value="us.cdc.phinvads" />
-    <version value="0.12.0" />
-  </dependsOn>
-  
   <dependsOn id="daplIg">
     <uri value="http://hl7.org/fhir/us/dapl/ImplementationGuide/hl7.fhir.us.dapl" />
     <packageId value="hl7.fhir.us.dapl" />
@@ -68,7 +62,42 @@
     <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
       inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
  
+   <resource>
+      <reference>
+        <reference value="Parameters/de-identify-data-operation-urls-example"/>
+      </reference>
+      <name value="Parameters Example to pass File Urls to De-Identify and Anonymize operation"/>
+      <description value="An Example of a conformant Parameters resource that can be passed to De-Identify and Anonymize operation."/>
+      <exampleBoolean value="true"/>
+   </resource>
    
+   <resource>
+      <reference>
+        <reference value="Bundle/bundle-with-identifiable-date"/>
+      </reference>
+      <name value="Bundle Example containing identifiable data"/>
+      <description value="An Example of a Bundle containing identifiable data in US Core resources."/>
+      <exampleBoolean value="true"/>
+   </resource>
+   
+   <resource>
+      <reference>
+        <reference value="Bundle/bundle-with-psuedonymized-date"/>
+      </reference>
+      <name value="Bundle Example containing psuedonymized data"/>
+      <description value="An Example of a Bundle containing psuedonymized data."/>
+      <exampleBoolean value="true"/>
+   </resource>
+   
+   <resource>
+      <reference>
+        <reference value="Bundle/dapl-deidentified-bundle"/>
+      </reference>
+      <name value="Bundle Example containing de-identified data using DAPL profiles"/>
+      <description value="An Example of a Bundle containing de-identified data using DAPL profiles."/>
+      <exampleBoolean value="true"/>
+   </resource>
+  
   
 
     <page>
@@ -240,7 +269,7 @@
     <!-- releaselabel should be the ballot status for HL7-published IGs. -->
     <parameter>
       <code value="releaselabel"/>
-     <value value="STU1 Release 1 - Standard for Trial-Use"/>
+     <value value="STU 1 Ballot"/>
     </parameter>
     <parameter>
       <code value="find-other-resources"/>

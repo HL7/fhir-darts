@@ -13,10 +13,22 @@
 	<p>
     <a href="schematrons.zip">Download the schematrons</a>
 	</p>
+	
 
 <h3>Cross Version Analysis</h3>
 
-<a href="cross-version-analysis.xhtml">Cross Version Analysis</a>
+{% include cross-version-analysis.xhtml %}
 
+#### Dependency Table
+
+{% include dependency-table.xhtml %}
+
+#### Globals Table
+
+{% include globals-table.xhtml %}
+
+#### IP Statements
+
+{% include ip-statements.xhtml %}
 
 </div>

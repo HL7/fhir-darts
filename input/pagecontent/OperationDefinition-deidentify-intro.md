@@ -3,7 +3,7 @@ All canonical (Official) URLs will be changed in the future and are not availabl
 
 ### Introduction
 
-The deidentify operation is to be used to de-identify the data containing PHI/PII. The approach for deidentification is based on policy identifiers.
+The de-identify operation is to be used to de-identify the data containing PHI/PII. The approach for de-identification is based on policy identifiers.
 
 * Currently the supported Policy Identifiers is based on HHS Safe Harbor Guidance which removes 18 different identifiable attributes from the input data.
 

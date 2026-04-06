@@ -14,7 +14,7 @@
     <status value="active"/>
     <experimental value="false"/>
     <publisher value="HL7 Cross Group Projects"/>
-    <description value="The DARTS profile is based on the **Parameters FHIR Resource and establishes the core elements, extensions, vocabularies and value sets for representing the data for sending input and receiving output for the DARTS deidentify and anonymize operations."/>
+    <description value="The DARTS profile is based on the **Parameters FHIR Resource and establishes the core elements, extensions, vocabularies and value sets for representing the data for sending input and receiving output for the DARTS de-identify and anonymize operations."/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -32,8 +32,8 @@
     <differential>
         <element id="Parameters">
             <path value="Parameters"/>
-            <short value="DARTS Deidentify Data Urls"/>
-            <definition value="The DARTS profile is based on the **Parameters FHIR Resource and establishes the core elements, extensions, vocabularies and value sets for representing the input and output for the DARTS deidentify and anonymize operations."/>
+            <short value="DARTS De-identify Data Urls"/>
+            <definition value="The DARTS profile is based on the **Parameters FHIR Resource and establishes the core elements, extensions, vocabularies and value sets for representing the input and output for the DARTS de-identify and anonymize operations."/>
         </element>
         <element id="Parameters.parameter">
             <path value="Parameters.parameter"/>

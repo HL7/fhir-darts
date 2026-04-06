@@ -27,7 +27,7 @@
         </table>
       </div>
       <h2>REST  behavior</h2>
-      <p>The primary focus of the DARTS Service Provider is to support the deidentify and anonymize operation.
+      <p>The primary focus of the DARTS Service Provider is to support the de-identify and anonymize operation.
       </p>
       <p>
         <b>Security:</b>
@@ -40,11 +40,11 @@
       
       <ul>
         <li>
-          <a href="OperationDefinition-deidentify.html">DeIdentify operation ([BaseURL]/$deidentify)</a>
+          <a href="OperationDefinition-de-identify.html">De-identify operation ([BaseURL]/$de-identify)</a>
         </li>
-      <!--  <li>
+        <li>
           <a href="OperationDefinition-anonymize.html">Anonymize operation ([BaseURL]/$anonymize)</a>
-        </li> -->
+        </li>
       </ul>
       <br/>
       <br/>   
@@ -69,13 +69,13 @@
   <format value="json"/>
   <rest>
     <mode value="server"/>
-    <documentation value="The primary focus of the DARTS Service Provider actor is to support the deidentify operation."/>
+    <documentation value="The primary focus of the DARTS Service Provider actor is to support the de-identify operation."/>
     <security>
       <description value="Implementations must meet the general security requirements documented in the security section of the implementation guide."/>
     </security>
     <operation>
-       <name value="deidentify"/> 
-       <definition value="http://hl7.org/fhir/us/darts/OperationDefinition/deidentify"/>
+       <name value="de-identify"/> 
+       <definition value="http://hl7.org/fhir/us/darts/OperationDefinition/de-identify"/>
     </operation>
   </rest>
 </CapabilityStatement>

@@ -8,7 +8,7 @@
   <status value="active"/>
   <experimental value="true"/>
   <date value="2026-03-27"/>
-  <description value="The DARTS Policy Identifiers CodeSystem contains a set  of codes that will be used for DARTS services to indicate the deidentification policies."/>
+  <description value="The DARTS Policy Identifiers CodeSystem contains a set  of codes that will be used for DARTS services to indicate the de-identification policies."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -22,7 +22,7 @@
   <count value="1"/>
   <concept>
     <code value="HHS_SAFE_HARBOR_DETERMINISTIC_METHOD"/>
-    <display value="Apply HHS Safe Harbor deterministic guidance for Deidentification"/>
-    <definition value="HHS Safe Harbor deterministic guidance removes 18 different attributes from PII/PHI data to create deidentifiable data"/>
+    <display value="Apply HHS Safe Harbor deterministic guidance for De-identification"/>
+    <definition value="HHS Safe Harbor deterministic guidance removes 18 different attributes from PII/PHI data to create de-identifiable data"/>
   </concept>
  </CodeSystem>

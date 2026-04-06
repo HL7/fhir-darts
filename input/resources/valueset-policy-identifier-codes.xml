@@ -22,7 +22,7 @@
 			<value value="http://hl7.org/fhir"/>
 		</telecom>
 	</contact>
-  <description value="The DARTS Policy Identifier codes is a valueset that is used to specify the type of policy to apply for deidentification of data."/>
+  <description value="The DARTS Policy Identifier codes valueset defines identifier(s) that are used to specify the type of policy to apply for de-identification of data."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -35,7 +35,7 @@
       <system value="http://hl7.org/fhir/us/darts/CodeSystem/darts-policy-identifiers"/>
       <concept>
       	<code value="HHS_SAFE_HARBOR_DETERMINISTIC_METHOD"/>
-      	<display value="Apply HHS Safe Harbor deterministic guidance for Deidentification"/>
+      	<display value="Apply HHS Safe Harbor deterministic guidance for De-identification"/>
       </concept>
     </include>
   </compose>
