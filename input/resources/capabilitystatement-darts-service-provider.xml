@@ -45,6 +45,9 @@
         <li>
           <a href="OperationDefinition-anonymize.html">Anonymize operation ([BaseURL]/$anonymize)</a>
         </li>
+        <li>
+          <a href="OperationDefinition-psuedonymize.html">Psuedonymize operation ([BaseURL]/$psuedonymize)</a>
+        </li>
       </ul>
       <br/>
       <br/>   
@@ -76,6 +79,14 @@
     <operation>
        <name value="de-identify"/> 
        <definition value="http://hl7.org/fhir/us/darts/OperationDefinition/de-identify"/>
+    </operation>
+    <operation>
+       <name value="anonymize"/> 
+       <definition value="http://hl7.org/fhir/us/darts/OperationDefinition/anonymize"/>
+    </operation>
+    <operation>
+       <name value="psuedonymize"/> 
+       <definition value="http://hl7.org/fhir/us/darts/OperationDefinition/psuedonymize"/>
     </operation>
   </rest>
 </CapabilityStatement>

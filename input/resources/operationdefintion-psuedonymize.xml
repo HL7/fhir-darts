@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OperationDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd">
+  <id value="psuedonymize"/>
+  <url value="http://hl7.org/fhir/us/darts/OperationDefinition/psuedonymize"/>
+  <name value="Psuedonymize"/>
+  <title value="Generate Psuedonymized data"/>
+  <status value="draft"/>
+  <kind value="operation"/>
+  <date value="2026-03-27T21:48:56+10:00"/>
+  <publisher value="HL7 International - Cross-Group Projects"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://www.hl7.org/Special/committees/cgp"/>
+    </telecom>
+  </contact>
+  <description value="Generates psuedonymized data from identifiable data. The algorithm to be used for psuedonymization is left to the DARTS service provider. Errors during the execution of the operation can be returned as OperationOutcome per the FHIR spec as a return parameter."/>
+  <code value="psuedonymize"/>
+  <system value="true"/>
+  <type value="false"/>
+  <instance value="false"/>
+  <parameter>
+    <name value="key"/>
+    <use value="in"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="A key that can be used for creating the psuedonym."/>
+    <type value="string"/>
+  </parameter>
+  <parameter>
+    <name value="algorithm"/>
+    <use value="in"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="The algorithm to be used for creating the psuedonym such as SHA256."/>
+    <type value="string"/>
+  </parameter>
+  <parameter>
+    <name value="identifiableDataFileUrls"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Urls of the Input Files represented as Parameters, with the type of Resource and the URL to the NDJSON data."/>
+    <type value="Parameters"/>
+  </parameter>
+  <parameter>
+    <name value="identifiableData"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Bundle containing identifiable data for one or more patients."/>
+    <type value="Bundle"/>
+  </parameter>
+  <parameter>
+    <name value="psuedonymizedFileUrls"/>
+    <use value="out"/>
+    <min value="0"/>
+    <max value="*"/>
+    <documentation value="Upon successful psuedonymization, the psuedonymized file Urls is returned back from the service."/>
+    <type value="Parameters"/>
+  </parameter>
+  <parameter>
+    <name value="psuedonymizedData"/>
+    <use value="out"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Upon successful psuedonymization, the psuedonymized data is returned back from the service. This output would be returned when the input is a bundle only."/>
+    <type value="Bundle"/>
+  </parameter>
+</OperationDefinition>
