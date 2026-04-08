@@ -4,7 +4,7 @@ This section provides an overview of the implementation guide.
 
 Currently many federal reporting use cases use aggregate data reporting because they are not authorized to receive PHI/PII as part of the reports. However, there is a desire to use de-identified or anonymized information to generate more insights. This requires data submitters to effectively remove PHI/PII data before submission. Interest in more granular reporting without PHI/PII exists across agencies.In addition, there are research, quality improvement initiatives and AI/ML use cases that require de-identified and anonymized information. The following are some example programs that require these capabilities 
 
-* HRSA's UDS+ Reporting
+* Federal Agency Reporting
 
 Read the <a href="usecases.html">Use Cases</a> section to get an idea of the various systems, actors and the data flow requirements. 
 

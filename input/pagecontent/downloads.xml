@@ -31,4 +31,8 @@
 
 {% include ip-statements.xhtml %}
 
+#### Expansion parameters 
+
+{% include expansion-params.xhtml %}
+
 </div>

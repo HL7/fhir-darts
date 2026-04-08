@@ -57,6 +57,12 @@
     <packageId value="hl7.fhir.us.dapl" />
     <version value="current" />
   </dependsOn>
+  
+  <dependsOn id="smartapplaunch">
+    <uri value="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch"/>
+    <packageId value="hl7.fhir.uv.smart-app-launch"/>
+    <version value="2.2.0"/>
+  </dependsOn>
 
   <definition>
     <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
@@ -170,6 +176,14 @@
         </extension>
         <nameUrl value="license.html"/>
         <title value="License"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+      	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="trial-use"/> 
+        </extension>
+        <nameUrl value="implementation.html"/>
+        <title value="implementation"/>
         <generation value="markdown"/>
       </page>
     </page>

@@ -70,7 +70,7 @@ The section identifies the business needs and specific user stories for DARTS IG
 
 Currently there are many reporting programs across the US where health care organizations submit data to state and federal agencies in aggregate form. While these aggregate reports meet current mandates, there is a desire to obtain more detailed line-level information instead of aggregate data. However, in many instances the federal agency may not have the authorities necessary to receive PII/PHI data and hence requires the data to be de-identified in order to receive more granular data. The following are the examples of such reporting
 
-* UDS reporting from Federally Qualified Health Centers (FQHCs) to HRSA
+* Reporting from Federally Qualified Health Centers (FQHCs) to Federal Agencies
 
 **Use Case 2: Clinical Research Reporting:** 
 
@@ -110,10 +110,22 @@ The table below summarizes the what services to consider for the different kind 
 
 {% include ServiceUsage.html %} 
 
+### Actors and Definitions
+
+This section contains a list of actors based on the above use cases.
+
+#### DARTS Service Provider 
+
+A DARTS Service Provider is an actor that implements the psuedonymization, de-identifciation and anonymization services defined in this implementation guide. 
+
+#### DARTS Consumer
+
+A DARTS 
+
 
 ### Identification Risk
 
-The risk of identification when using the above services has to be ascertained by the healthcare organization releasing or providing the data based on the use case. The following are links that provide valuable industry regulations and guidance for risk assessments
+The risk of identification when using the services defined in this IG has to be ascertained by the health care organization releasing or providing the data based on the use case. The following are links that provide valuable industry regulations and guidance for risk assessments
 
 * [HHS HIPAA De-identification Guidance](https://www.hhs.gov/hipaa/for-professionals/special-topics/de-identification/index.html) 
 * [NIST Guidance](https://www.nist.gov/itl/iad/deidentification) 

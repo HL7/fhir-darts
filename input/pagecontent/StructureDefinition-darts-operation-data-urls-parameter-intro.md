@@ -3,4 +3,4 @@ All canonical (Official) URLs will be changed in the future and are not availabl
 
 ### Introduction
 
-This profile is used to represent the input and output parameters for the $de-identify and $anonymize operation of DARTS.  
+This profile is used to represent the input and output parameters for the $psuedonymize, $de-identify and $anonymize operations specified in the IG.  

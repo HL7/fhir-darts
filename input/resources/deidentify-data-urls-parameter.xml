@@ -5,7 +5,6 @@
     <meta>
         <versionId value="12"/>
         <lastUpdated value="2026-03-27T02:03:11.293+00:00"/>
-        <source value="#3LDMUQYYwafwTzqK"/>
     </meta>
     <url value="http://hl7.org/fhir/us/darts/StructureDefinition/darts-operation-data-urls-parameter"/>
     <version value="1.0.0"/>
@@ -14,7 +13,7 @@
     <status value="active"/>
     <experimental value="false"/>
     <publisher value="HL7 Cross Group Projects"/>
-    <description value="The DARTS profile is based on the **Parameters FHIR Resource and establishes the core elements, extensions, vocabularies and value sets for representing the data for sending input and receiving output for the DARTS de-identify and anonymize operations."/>
+    <description value="The DARTS profile is based on the **Parameters FHIR Resource and establishes the core elements, extensions, vocabularies and value sets for representing the data for sending input and receiving output for the DARTS psuedonymize, de-identify and anonymize operations."/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -32,8 +31,8 @@
     <differential>
         <element id="Parameters">
             <path value="Parameters"/>
-            <short value="DARTS De-identify Data Urls"/>
-            <definition value="The DARTS profile is based on the **Parameters FHIR Resource and establishes the core elements, extensions, vocabularies and value sets for representing the input and output for the DARTS de-identify and anonymize operations."/>
+            <short value="DARTS operation Data Urls"/>
+            <definition value="The DARTS profile is based on the **Parameters FHIR Resource and establishes the core elements, extensions, vocabularies and value sets for representing the input and output for the DARTS psuedonymize, de-identify and anonymize operations."/>
         </element>
         <element id="Parameters.parameter">
             <path value="Parameters.parameter"/>

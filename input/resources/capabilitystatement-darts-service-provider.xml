@@ -33,10 +33,10 @@
         <b>Security:</b>
       </p>
       <p>Implementations must meet the general security requirements documented in FHIR <a href="http://hl7.org/fhir/security.html">Security guidance</a>.</p>
-      <p>In addition the DARTS Service Provider **SHOULD** meet the security requirements as outlined in the <a href="spec.html#smart-on-fhir-backend-services-authorization">SMART on FHIR Backend Services Authorization</a></p>
+      <p><span class="conformance">In addition the DARTS Service Provider **SHOULD** meet the security requirements as outlined in the <a href="spec.html#smart-on-fhir-backend-services-authorization">SMART on FHIR Backend Services Authorization</a></span></p>
        
         <h3>FHIR Operations summary</h3>
-        <p>The following FHIR operations SHALL be supported by the DARTS Service Provider</p>
+        <p><span class="conformance">The following FHIR operations SHALL be supported by the DARTS Service Provider</span></p>
       
       <ul>
         <li>

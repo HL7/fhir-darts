@@ -3,7 +3,7 @@
     "id": "de-identify-data-operation-urls-example",
     "meta": {
         "profile": [
-            "http://hl7.org/fhir/us/uds-plus/StructureDefinition/uds-plus-deidentify-operation-data-urls-parameter"
+            "http://hl7.org/fhir/us/darts/StructureDefinition/darts-operation-data-urls-parameter"
         ]
     },
     "parameter": [
@@ -12,7 +12,7 @@
             "valueCode": "fhir+ndjson"
         },
         {
-            "name": "udsData",
+            "name": "data",
             "part": [
                 {
                     "name": "resourceType",

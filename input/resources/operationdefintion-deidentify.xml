@@ -2,9 +2,9 @@
 <OperationDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd">
   <id value="de-identify"/>
   <url value="http://hl7.org/fhir/us/darts/OperationDefinition/de-identify"/>
-  <name value="De-identify"/>
+  <name value="Deidentify"/>
   <title value="Generate De-identified data"/>
-  <status value="draft"/>
+  <status value="active"/>
   <kind value="operation"/>
   <date value="2026-03-27T21:48:56+10:00"/>
   <publisher value="HL7 International - Cross Group Projects"/>

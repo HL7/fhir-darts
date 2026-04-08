@@ -4,7 +4,6 @@
   <meta>
     <versionId value="1"/>
     <lastUpdated value="2022-08-04T15:52:33.158+00:00"/>
-    <source value="#3Te0anOrvocKgcow"/>
     <profile
              value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
   </meta>
@@ -33,10 +32,6 @@
   <compose>
     <include>
       <system value="http://hl7.org/fhir/us/darts/CodeSystem/darts-policy-identifiers"/>
-      <concept>
-      	<code value="HHS_SAFE_HARBOR_DETERMINISTIC_METHOD"/>
-      	<display value="Apply HHS Safe Harbor deterministic guidance for De-identification"/>
-      </concept>
     </include>
   </compose>
 </ValueSet>
