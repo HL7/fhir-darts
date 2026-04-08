@@ -10,7 +10,7 @@
 	  <valueCode value="trial-use"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-	  <valueInteger value="1"/>
+	  <valueInteger value="2"/>
   </extension>
   <url value="http://hl7.org/fhir/us/darts/ImplementationGuide/darts"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->

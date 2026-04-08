@@ -10,6 +10,7 @@
   <p>
   This implementation guide (IG) defines the specifications by which federal agencies such as HRSA, Substance Abuse and Mental Health Administration (SAMHSA), and others can receive line level de-identified information and can publish anonymized datasets. The IG specifies services to
   <ul>
+  <li><b>Psuedonymize patient data</b></li>
   <li><b>De-identify patient data based on a policy identifier</b></li>
   <li><b>Anonymize health care data sets using specific techniques</b></li>
   </ul>

@@ -1,10 +1,11 @@
 ### Implementation Guidance with Examples
 
-This page contains relevant implementation guidance for a service provider with examples. 
+This page contains relevant guidance for a DARTS service provider to implement the DARTS services with examples. 
 
-## 1. Identifiable Data
+#### Identifiable Data to demonstrate the various DARTS services
 
-Aligned to `uscore_original_bundle_with_fullurl.json`.
+The table below summarizes data from [US Core Example Bundle](Bundle-bundle-with-identifiable-date.html) that conforms to US Core profiles containing identifiable data in the Patient and Condition resources.
+ 
 
 | First Name | Last Name | DOB | ZIP | Gender | Disease |
 | --- | --- | --- | --- | --- | --- |
@@ -19,7 +20,7 @@ Aligned to `uscore_original_bundle_with_fullurl.json`.
 | James | Foster | 1978-03-11 | 30301 | male | CKD |
 | Barbara | Collins | 1988-10-02 | 60614 | female | Diabetes |
 
-### FHIR snippet
+##### Patient resource snippet showing identifiable data
 
 ```json
 {
@@ -43,20 +44,15 @@ Aligned to `uscore_original_bundle_with_fullurl.json`.
 }
 ```
 
-### Transformation code
 
-```python
-patient["name"] = [{"family": last_name, "given": [first_name]}]
-patient["birthDate"] = dob
-patient["address"] = [{"postalCode": zip_code}]
-condition["code"]["text"] = disease
-```
+#### Psuedonymization service implementation
 
----
+This section shows how the identifiable data can be psuedonymized. This is just an example and not the actual implementation of the psuedonymize service. 
 
-## 2. Pseudonymized Data
+The table below summarizes data from [Psuedonymized Example Bundle](Bundle-bundle-with-psuedonymized-date.html) that has been psuedonymized using the patient's first name, last name, key="Test" and algorithm="SHA256". The original bundle used as an input to the psuedonymization process is the [US Core Example Bundle](Bundle-bundle-with-identifiable-date.html).
 
-Aligned to `fhir_pseudonymized_bundle.json`.
+In the FHIR Patient resource, the first name and last name is remvoed and instead a psuedonym is added to the Patient.identifier field. Additional fields can be added in the creation of the psuedonym as needed. Psuedonymized data is still considered as identifiable data and is useful to to link patient data across data sources within an enterprise. 
+
 
 | Pseudonym | DOB | ZIP | Gender | Disease |
 | --- | --- | --- | --- | --- |
@@ -71,7 +67,7 @@ Aligned to `fhir_pseudonymized_bundle.json`.
 | f3decbc702e525a8d80021022c41092f214c99fb1be50c4dd9377d53d2996dc5 | 1978-03-11 | 30301 | male | CKD |
 | f7557a4583e382a02c6e282a5505107469150a4b6cc7facd667985c6858f9ee7 | 1980-09-13 | 560014 | female | CKD |
 
-### FHIR snippet
+##### Patient resource showing psuedonymized data 
 
 ```json
 {
@@ -93,7 +89,7 @@ Aligned to `fhir_pseudonymized_bundle.json`.
 }
 ```
 
-### Transformation code
+##### Sample function to implement psuedonymization
 
 ```python
 import hashlib
@@ -111,9 +107,36 @@ patient["identifier"] = [{
 
 ---
 
-## 3. De-identified Data
 
-Aligned to the DAPL-style de-identification transformation derived from `uscore_original_bundle_enriched_practitioner_fixed.json`.
+##### Candidate fields for psuedonymizing a Patient  Resource
+
+We request feedback from vendors on the fields that should be considered for psuedonymizing a patient resource for the following use case
+
+* An enterprise or health center may have multiple systems (EHRs) such as a clinical system, dental system and reports data separately from each system to a Federal agency. However, if the same patient is present in both systems, they would be reported multiple times. In order to help the data receiver to identify that the same patient is being reported multiple times when receiving de-identified data a psuedonym could be used. The following fields are candidates to create a psuedonym
+
+* First name 
+* Last name
+* Gender 
+* Date of Birth
+
+##### Key and Algorithm values for psuedonymizing resources 
+
+* Psuedonymization is done using a high entropy key that is protected so that it is not reversible and it is recomended to use a 4096 bit x509 certificate.
+
+* For the algorithm selection, it is recommended to use one of the following algorithms
+
+* SHA256
+* RSA384
+
+NOTE: Implementers can provide feedback on the algorithms and keys that could be used for creating the psuedonym.
+
+
+#### De-identification service implementation
+
+This section shows how the identifiable data can be de-identified. This is just an example and not the actual implementation of the de-identification service. 
+
+The table below summarizes data from [De-identified Example Bundle conforming to DAPL IG](Bundle-dapl-deidentified-bundle.html) that has been de-identified using the HHS Safe Harbour method and are conformant to the DAPL IG. The original bundle used as an input to the de-identification process is the [US Core Example Bundle](Bundle-bundle-with-identifiable-date.html).
+
 
 | Age | State | Country | Gender | Disease | Onset Year |
 | --- | --- | --- | --- | --- | --- |
@@ -128,7 +151,7 @@ Aligned to the DAPL-style de-identification transformation derived from `uscore_
 | 48 | MA | US | male | CKD | 2014 |
 | 38 | TN | US | female | Diabetes | 2023 |
 
-### FHIR snippet
+##### Patient resource showing de-identified data 
 
 ```json
 {
@@ -159,7 +182,7 @@ Aligned to the DAPL-style de-identification transformation derived from `uscore_
 }
 ```
 
-### Transformation code
+##### Sample code to implement de-identification
 
 ```python
 CURRENT_YEAR = 2026
@@ -202,7 +225,8 @@ condition["subject"].pop("display", None)
 condition["onsetDateTime"] = condition["onsetDateTime"][:4]
 ```
 
-### Key changes
+
+##### List of changes done to the US Core Patient and Condition resources to de-identify
 
 - removed identifiers and names
 - removed date of birth completely
@@ -214,9 +238,12 @@ condition["onsetDateTime"] = condition["onsetDateTime"][:4]
 
 ---
 
-## 4. Anonymized Data
+#### Anonymization Service implementation
 
-This is an aggregate-style example. It is not a row-level FHIR patient bundle.
+This section shows how the identifiable data can be anonymized. This is just an example and not the actual implementation of the anonymization service. 
+
+The table below summarizes data from Anonymized Example Bundle conforming to DAPL IG that has been anonymized using the k-anonymity method and are conformant to the DAPL IG. The original bundle used as an input to the anonymization process is the [US Core Example Bundle](Bundle-bundle-with-identifiable-date.html).
+
 
 | Age Band | Region | Disease Count |
 | --- | --- | --- |
@@ -225,7 +252,7 @@ This is an aggregate-style example. It is not a row-level FHIR patient bundle.
 | 40–60 | Region B | 2 CKD |
 | 30–50 | Region C | 3 CKD |
 
-### Transformation code
+##### Example code to implement anonymization
 
 ```python
 from collections import Counter
@@ -245,9 +272,7 @@ anonymized_output = [
 ]
 ```
 
-## Summary
+##### List of changes done to the de-identifeid Patient and Condition resources to anonymize
 
-- **Identifiable** keeps direct identifiers.
-- **Pseudonymized** replaces direct identity with a stable token.
-- **De-identified** removes direct identifiers and reduces other identifying fields.
-- **Anonymized** removes row-level linkage and publishes grouped information only.
+- Grouped patients by age, region and disease
+- Retrained only the counts at the group level and there is no line level information
