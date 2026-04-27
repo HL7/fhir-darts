@@ -14,7 +14,6 @@
     <a href="schematrons.zip">Download the schematrons</a>
 	</p>
 	
-
 <h3>Cross Version Analysis</h3>
 
 {% include cross-version-analysis.xhtml %}
