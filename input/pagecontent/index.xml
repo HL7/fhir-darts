@@ -5,14 +5,14 @@
   <a name="intro"> </a>
   <h3>Introduction</h3>
   <p>
-  The health care industry has embraced FHIR as the standard for data exchange and has been implementing FHIR in the real-world as part of the various accelerators such as Argonaut, DaVinci, and Helios. The adoption of FHIR has been further expedited by the Assistant Secretary for Technology Policy (ASTP) and Centers for Medicare and Medicaid Services (CMS) regulations that require the implementation of FHIR for multiple use cases. One of the competing requirements that is emerging in the industry is the need for data that does not contain protected health information (PHI) or personally identifiable information (PII). These requirements are common among federal reporting use cases such as Health Resources and Services Administration (HRSA) reporting, public health reporting to Centers for Disease Control and Prevention (CDC), data needs for training artificial intelligence (AI) models, and data needs for research programs. This implementation guide creates a set of services that can de-identify, anonymize, and redact data represented by United States Core Data for Interoperability (USCDI) resources based on a policy identifier.
+  The health care industry has embraced FHIR as the standard for data exchange and has been implementing FHIR in real-world settings as part of the various accelerators such as Argonaut, DaVinci, and Helios. The adoption of FHIR has been further accelerated by the Office of the National Coordinator for Health Information Technology (ONC)  and Centers for Medicare and Medicaid Services (CMS) regulations that require the implementation of FHIR for multiple use cases. One of the competing requirements that is emerging in the industry is the need for data that does not contain protected health information (PHI) or personally identifiable information (PII). These requirements are common among federal reporting use cases such as Health Resources and Services Administration (HRSA) reporting programs, public health reporting to Centers for Disease Control and Prevention (CDC), data needs for training artificial intelligence (AI) models, analyzing data for impact and research programs. This implementation guide creates a set of services that can de-identify, anonymize, and redact data represented by United States Core Data for Interoperability (USCDI) resources based on a policy identifier.
   </p>
   <p>
   This implementation guide (IG) defines the specifications by which federal agencies such as HRSA, Substance Abuse and Mental Health Administration (SAMHSA), and others can receive line level de-identified information and can publish anonymized datasets. The IG specifies services to
   <ul>
-  <li><b>Psuedonymize patient data</b></li>
+  <li><b>Pseudonymize patient data</b></li>
   <li><b>De-identify patient data based on a policy identifier</b></li>
-  <li><b>Anonymize health care data sets using specific techniques</b></li>
+  <li><b>Anonymize health care datasets using specific techniques</b></li>
   </ul>
   </p>
 	
@@ -22,7 +22,7 @@
   </p>
   <ul>
     <li>
-      <a href="background.html">Background</a> - The page provides introduction and definitions for de-identification, pseudonymization, and anonymization.
+      <a href="background.html">Background</a> - The page provides an introduction and definitions for de-identification, pseudonymization, and anonymization.
     </li>
     <li>
       <a href="usecases.html">Use Cases</a> - Defines the  use case, workflows. actors and systems that will be used as part of the IG.
@@ -41,17 +41,18 @@
   <a name="relationship"> </a>
 	<h3>Relationship to other Implementation Guides</h3>
 	<p>
-	This section elaborates the relationship of this IG to other implementation guides.
+	This section elaborates on the relationship of this IG to other implementation guides.
         </p>
 	<a name="us-core-relationship"> </a>
-	<h4>Relationship to US Core Implementation Guide</h4>
+	<h4>Relationship to the US Core Implementation Guide</h4>
 	<p>
 	This implementation guide, leverages terminology from US Core, and also uses US Core profiles to specify the inputs to the DARTS services. The outputs of DARTS services will be represented using profiles  specified in the DAPL IG.
         </p>
 	<a name="dapl-relationship"> </a>
-	<h4>Relationship to De-identified, Anonymized FHIR Profiles Library (DAPL) Implementation Guide</h4>
+	<h4>Relationship to the De-identified, Anonymized FHIR Profiles Library (DAPL) Implementation Guide</h4>
 	<p>
-	This DARTS IG complements the De-identified, Anonymized FHIR Profiles Library (DAPL) Implementation Guide by defining the services that implement techniques and algorithms for de-identification and anonymization, whereas the DAPL IG defines the set of profiles to represent the de-identified and anonymized information.
+	This DARTS IG defines the services that implement techniques and algorithms for de-identification and anonymization, whereas the DAPL IG defines the set of profiles to represent the de-identified and anonymized information. The IGs are complementary.
+	The following is a diagram that shows the relationship between US Core, DARTS IG, and DAPL IG.
     </p>
     
 
@@ -65,6 +66,6 @@
 	<a name="ds4p-relationship"> </a>
 	<h4>Relationship to Data Segmentation for Privacy (DS4P) Implementation Guide</h4>
 	<p>
-	The DS4P IG provides guidance for applying security labels in FHIR that can be used to protect the privacy of patients' data. DARTS IG on the other hand aims to remove PHI/PII from the data and hence will not be using the DS4P tags currently.
+	The DS4P IG provides guidance for applying security labels in FHIR that can be used to protect the privacy of patients' data. The DARTS IG, on the other hand aims to remove PHI/PII from the data and hence will not be using the DS4P tags currently.
     </p>
 </div>

@@ -20,14 +20,14 @@ Systems asserting conformance to this implementation guide have to implement the
 
 ##### MUST SUPPORT Definition
 
-* <span class="fhir-conformance">Systems SHALL be capable of populating data elements as specified by the profiles and data elements are returned using the specified APIs in the capability statement.</span>
+* <span class="fhir-conformance">Systems SHALL be capable of populating data elements as specified by the profiles and returning the data elements are returned using the specified APIs in the capability statement.</span>
 
 * <span class="fhir-conformance">Systems SHALL be capable of processing resource instances containing the MUST SUPPORT data elements without generating an error or causing the application to fail.</span>
 
 
 * <span class="fhir-conformance">Systems SHOULD be capable of displaying the MUST SUPPORT data elements for human use or storing it for other purposes.</span>
 
-* <span class="fhir-conformance">In situations where information on a particular data element is not present and the reason for absence is unknown, Systems SHALL NOT include the data elements in the resource instance returned from executing the API requests.</span>
+* <span class="fhir-conformance">In situations where information on a particular data element is not present and the reason for absence is unknown, Systems SHALL NOT include the data elements in the resource instance returned in response to the API requests.</span>
 
 * <span class="fhir-conformance">When accessing de-identified or anonymized data, Systems SHALL interpret missing data elements within resource instances returned from API requests as data that has been removed as part of the de-identification and anonymization process.</span>
 
@@ -65,7 +65,7 @@ This section identifies the different requirements for DARTS Service Provider th
 
 * <span class="fhir-conformance">The DARTS Service Provider SHALL remove all data elements that are not identified as "SUPPORTED" in the DAPL profile definitions.</span>
 
-**Implementation Note:** Common data elements which may have identifiable data have been explicitly mentioned in the profile with a cardinality of 0..0 which means they are not expected to be present. However other data elements which may be allowed in the resource may be included by the EHR including extensions. These additional data element and extensions that are not specified in the DAPL profiles have to be removed explicitly by the DARTS Service Provider implementation.
+**Implementation Note:** Common data elements which may have identifiable data have been explicitly mentioned in the profile with a cardinality of 0..0 which means they are not expected to be present. However, other data elements which may be allowed in the resource may be included by the EHR including extensions. These additional data element and extensions that are not specified in the DAPL profiles **MUST** be removed explicitly by the DARTS Service Provider implementation.
 
 * <span class="fhir-conformance">The DARTS Service Provider SHALL implement the de-identification requirements as per the [HHS De-identification Guidance Deterministic method](https://www.hhs.gov/sites/default/files/ocr/privacy/hipaa/understanding/coveredentities/De-identification/hhs_deid_guidance.pdf).</span>
 
