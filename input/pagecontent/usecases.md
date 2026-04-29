@@ -17,6 +17,7 @@ Alternately, de-identification is the process of removing or transforming identi
 
 For example, patient John Doe’s data will not include any patient identifier or name.
 
+##### HHS Safe Harbor Guidance for De-identification
 
 According to [HHS Safe Harbor Guidance](https://www.hhs.gov/hipaa/for-professionals/special-topics/de-identification/index.html), 18 different patient-related attributes should be removed for the data to be called de-identified data. These attributes that need to be removed are specified in the [HHS Safe Harbor De-identification Standard](https://www.hhs.gov/hipaa/for-professionals/special-topics/de-identification/index.html#standard) and are listed here for convenience. See the [standard](https://www.hhs.gov/hipaa/for-professionals/special-topics/de-identification/index.html#standard) for the full legal requirements.
 
@@ -39,6 +40,11 @@ According to [HHS Safe Harbor Guidance](https://www.hhs.gov/hipaa/for-profession
 * Biometric identifiers including finger and voice prints
 * Full-face photographs and comparable images
 * Any other unique identifying characteristic, code of the individual
+
+
+##### HHS Expert Determination Guidance for De-identification
+
+HHS guidance for de-identification also includes the [Expert Determination]() method which can also be used to create a de-identification service. 
 
 
 ##### Re-identification of de-identified information 

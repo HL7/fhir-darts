@@ -18,10 +18,12 @@
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specification<b class="caret">
       </b>
     </a>
-    <ul class="dropdown-menu">
-      
+    <ul class="dropdown-menu">     
       <li>
         <a href="spec.html">Formal Specification</a>
+      </li>
+      <li>
+        <a href="implementation.html">Implementation Examples</a>
       </li>
     </ul>
   </li>
