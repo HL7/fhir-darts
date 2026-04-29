@@ -64,7 +64,7 @@
             ]
           },
           {
-            "url": "http://hl7.org/fhir/us/dapl/StructureDefinition/dapl-birthsex-extension",
+            "url": "http://hl7.org/fhir/us/dapl/StructureDefinition/dapl-sex-extension",
             "valueCode": "M"
           },
           {
@@ -195,7 +195,7 @@
             ]
           },
           {
-            "url": "http://hl7.org/fhir/us/dapl/StructureDefinition/dapl-birthsex-extension",
+            "url": "http://hl7.org/fhir/us/dapl/StructureDefinition/dapl-sex-extension",
             "valueCode": "F"
           },
           {
@@ -322,7 +322,7 @@
             ]
           },
           {
-            "url": "http://hl7.org/fhir/us/dapl/StructureDefinition/dapl-birthsex-extension",
+            "url": "http://hl7.org/fhir/us/dapl/StructureDefinition/dapl-sex-extension",
             "valueCode": "M"
           },
           {
@@ -448,7 +448,7 @@
             ]
           },
           {
-            "url": "http://hl7.org/fhir/us/dapl/StructureDefinition/dapl-birthsex-extension",
+            "url": "http://hl7.org/fhir/us/dapl/StructureDefinition/dapl-sex-extension",
             "valueCode": "F"
           },
           {
@@ -574,7 +574,7 @@
             ]
           },
           {
-            "url": "http://hl7.org/fhir/us/dapl/StructureDefinition/dapl-birthsex-extension",
+            "url": "http://hl7.org/fhir/us/dapl/StructureDefinition/dapl-sex-extension",
             "valueCode": "M"
           },
           {
@@ -700,7 +700,7 @@
             ]
           },
           {
-            "url": "http://hl7.org/fhir/us/dapl/StructureDefinition/dapl-birthsex-extension",
+            "url": "http://hl7.org/fhir/us/dapl/StructureDefinition/dapl-sex-extension",
             "valueCode": "F"
           },
           {
@@ -826,7 +826,7 @@
             ]
           },
           {
-            "url": "http://hl7.org/fhir/us/dapl/StructureDefinition/dapl-birthsex-extension",
+            "url": "http://hl7.org/fhir/us/dapl/StructureDefinition/dapl-sex-extension",
             "valueCode": "M"
           },
           {
@@ -952,7 +952,7 @@
             ]
           },
           {
-            "url": "http://hl7.org/fhir/us/dapl/StructureDefinition/dapl-birthsex-extension",
+            "url": "http://hl7.org/fhir/us/dapl/StructureDefinition/dapl-sex-extension",
             "valueCode": "F"
           },
           {
@@ -1078,7 +1078,7 @@
             ]
           },
           {
-            "url": "http://hl7.org/fhir/us/dapl/StructureDefinition/dapl-birthsex-extension",
+            "url": "http://hl7.org/fhir/us/dapl/StructureDefinition/dapl-sex-extension",
             "valueCode": "M"
           },
           {
@@ -1204,7 +1204,7 @@
             ]
           },
           {
-            "url": "http://hl7.org/fhir/us/dapl/StructureDefinition/dapl-birthsex-extension",
+            "url": "http://hl7.org/fhir/us/dapl/StructureDefinition/dapl-sex-extension",
             "valueCode": "F"
           },
           {
