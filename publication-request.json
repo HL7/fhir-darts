@@ -12,5 +12,8 @@
   "category" : "Privacy / Security",
   "title" : "De-identification, Anonymization and Redaction Toolkit Services (DARTS) FHIR IG",
   "ci-build" : "https://build.fhir.org/ig/HL7/fhir-darts/",
+  "registry-description" : "The DARTS Implementation Guide defines a deidentification and anonymization services that will be used to create deidentified and anonymized data based on different policies, jurisdictions and applicable regulations",
+  "registry-country" : "US",
+  "registry-authority" : "HL7",
   "introduction" : "De-identification, Anonymization and Redaction Toolkit Services (DARTS) FHIR IG defines a set of FHIR operations to de-identify and anonymize identifiable data so that non PII/PHI data can be exchanged."  
 }
