@@ -11,7 +11,7 @@
   "first" : "true",
   "category" : "Privacy / Security",
   "title" : "De-identification, Anonymization and Redaction Toolkit Services (DARTS) FHIR IG",
-  "ci-build" : "https://build.fhir.org/ig/HL7/fhir-darts/",
+  "ci-build" : "https://build.fhir.org/ig/HL7/fhir-darts",
   "registry-description" : "De-identification, Anonymization and Redaction Toolkit Services (DARTS) FHIR IG defines a set of FHIR operations to de-identify and anonymize identifiable data so that non PII/PHI data can be exchanged.",
   "registry-country" : "US",
   "registry-authority" : "HL7",
