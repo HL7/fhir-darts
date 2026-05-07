@@ -55,7 +55,7 @@
   <dependsOn id="daplIg">
     <uri value="http://hl7.org/fhir/us/dapl/ImplementationGuide/hl7.fhir.us.dapl" />
     <packageId value="hl7.fhir.us.dapl" />
-    <version value="current" />
+    <version value="1.0.0-ballot" />
   </dependsOn>
   
   <dependsOn id="smartapplaunch">
