@@ -44,7 +44,7 @@ According to [HHS Safe Harbor Guidance](https://www.hhs.gov/hipaa/for-profession
 
 ##### HHS Expert Determination Guidance for De-identification
 
-HHS guidance for de-identification also includes the [Expert Determination]() method which can also be used to create a de-identification service. 
+HHS guidance for de-identification also includes the [Expert Determination](https://www.hhs.gov/hipaa/for-professionals/special-topics/de-identification/index.html#guidancedetermination) method which can also be used to create a de-identification service. 
 
 
 ##### Re-identification of de-identified information 
@@ -138,5 +138,6 @@ The risk of identification when using the services must be ascertained by the he
 * [HHS HIPAA De-identification Guidance](https://www.hhs.gov/hipaa/for-professionals/special-topics/de-identification/index.html) 
 * [NIST Guidance](https://www.nist.gov/itl/iad/deidentification) 
 * [NIST IR 8053 for De-identification](https://csrc.nist.gov/pubs/ir/8053/final)
+* [IHE De-identification handbook](https://github.com/IHE/ITI.DeIdHandbook)
 
 

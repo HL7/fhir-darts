@@ -41,7 +41,7 @@ The full set of profiles defined in this implementation guide can be found by fo
 
 #### SMART on FHIR Backend Services Authorization
 
-This section outlines how the SMART on FHIR Backend Services Authorization will be used by the DARTS implementation guide. 
+This section outlines how the SMART on FHIR Backend Services Authorization will be used by the DARTS implementation guide to implement security mechanisms for DARTS services. 
 
 * <span class="fhir-conformance">When conforming to the SMART Backend Services Authorization, System Actors SHALL include token_endpoint, scopes_supported, token_endpoint_auth_methods_supported and token_endpoint_auth_signing_alg_values_supported as defined in the [SMART on FHIR IG Backend Services]({{site.data.fhir.smartapplaunch}}/backend-services.html) specification.</span>
 
@@ -57,17 +57,23 @@ This section outlines how the SMART on FHIR Backend Services Authorization will 
 
 This section identifies the different requirements for DARTS Service Provider that provides psuedonymization, de-identification and anonymization services.
 
-* <span class="fhir-conformance">The DARTS Service Provider SHALL support the de-identify operation for each type of resource identified in the DAPL IG.</span>
+* <span class="fhir-conformance">The DARTS Service Provider SHOULD support the de-identify operation for each type of resource identified in the DAPL IG.</span>
 
-* <span class="fhir-conformance">The DARTS Service Provider SHALL create an identifier that is retained internally to link between identifiable and de-identifiable data.</span>
+* <span class="fhir-conformance">The DARTS Service Provider SHOULD support the anonymize operation for resources identified in the DAPL IG.</span>
 
-* <span class="fhir-conformance">The DARTS Service Provider SHALL remove all identifiable data using the profiles specified in the DAPL IG and create NDJSON data based on the IG profiles.</span>
+* <span class="fhir-conformance">The DARTS Service Provider SHALL support the anonymize operation for resources identified in the DAPL IG.</span>
 
-* <span class="fhir-conformance">The DARTS Service Provider SHALL remove all data elements that are not identified as "SUPPORTED" in the DAPL profile definitions.</span>
+* <span class="fhir-conformance">For the de-identification service, the DARTS Service Provider SHALL create an identifier that is retained internally to link between identifiable and de-identifiable data.</span>
+
+* <span class="fhir-conformance">For the de-identification and anonymization services, the DARTS Service Provider SHALL remove all identifiable data using the profiles specified in the DAPL IG and create NDJSON data based on the IG profiles.</span>
+
+* <span class="fhir-conformance">For the de-identification and anonymization services, the DARTS Service Provider SHALL remove all data elements that are not identified as "SUPPORTED" in the DAPL profile definitions.</span>
 
 **Implementation Note:** Common data elements which may have identifiable data have been explicitly mentioned in the profile with a cardinality of 0..0 which means they are not expected to be present. However, other data elements which may be allowed in the resource may be included by the EHR including extensions. These additional data element and extensions that are not specified in the DAPL profiles **MUST** be removed explicitly by the DARTS Service Provider implementation.
 
-* <span class="fhir-conformance">The DARTS Service Provider SHALL implement the de-identification requirements as per the [HHS De-identification Guidance Deterministic method](https://www.hhs.gov/sites/default/files/ocr/privacy/hipaa/understanding/coveredentities/De-identification/hhs_deid_guidance.pdf).</span>
+* <span class="fhir-conformance">The DARTS Service Provider **SHOULD** implement the de-identification requirements as per the [HHS De-identification Guidance Deterministic method](https://www.hhs.gov/sites/default/files/ocr/privacy/hipaa/understanding/coveredentities/De-identification/hhs_deid_guidance.pdf).</span>
+
+* <span class="fhir-conformance">The DARTS Service Provider **MAY** implement the de-identification requirements using the [HHS De-identification Expert Determination Guidance](https://www.hhs.gov/hipaa/for-professionals/special-topics/de-identification/index.html#guidancedetermination).</span>
 
 * <span class="fhir-conformance">When choosing to implement the de-identification method using safe harbor provisions from the HHS De-identification Guidance, DARTS Service Providers **SHALL** eliminate records related to the specific zip codes as specified in the guidance.</span>
 
